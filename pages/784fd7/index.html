@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>装饰者模式 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="个人技术博客,技术文档,学习,面试,markdown">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.b0792086.css" as="style"><link rel="preload" href="/assets/js/app.73613012.js" as="script"><link rel="preload" href="/assets/js/2.1211d3e1.js" as="script"><link rel="preload" href="/assets/js/14.e2a3317c.js" as="script"><link rel="prefetch" href="/assets/js/10.a044793b.js"><link rel="prefetch" href="/assets/js/100.5696225b.js"><link rel="prefetch" href="/assets/js/101.a42b3f5a.js"><link rel="prefetch" href="/assets/js/102.1e45d274.js"><link rel="prefetch" href="/assets/js/103.96db28ac.js"><link rel="prefetch" href="/assets/js/104.ff504f26.js"><link rel="prefetch" href="/assets/js/105.fd498331.js"><link rel="prefetch" href="/assets/js/106.a2a6ca7c.js"><link rel="prefetch" href="/assets/js/11.5e7d0c95.js"><link rel="prefetch" href="/assets/js/12.e841c0c3.js"><link rel="prefetch" href="/assets/js/13.41a2fb93.js"><link rel="prefetch" href="/assets/js/15.a81a6ef1.js"><link rel="prefetch" href="/assets/js/16.7b69e07f.js"><link rel="prefetch" href="/assets/js/17.777b188a.js"><link rel="prefetch" href="/assets/js/18.c81cf408.js"><link rel="prefetch" href="/assets/js/19.a59301e0.js"><link rel="prefetch" href="/assets/js/20.18827160.js"><link rel="prefetch" href="/assets/js/21.8d5d511f.js"><link rel="prefetch" href="/assets/js/22.a8ac93a6.js"><link rel="prefetch" href="/assets/js/23.1bbe4807.js"><link rel="prefetch" href="/assets/js/24.00525e76.js"><link rel="prefetch" href="/assets/js/25.3c90e0a0.js"><link rel="prefetch" href="/assets/js/26.c93f745b.js"><link rel="prefetch" href="/assets/js/27.01181006.js"><link rel="prefetch" href="/assets/js/28.93af4585.js"><link rel="prefetch" href="/assets/js/29.a0806690.js"><link rel="prefetch" href="/assets/js/3.70a493ce.js"><link rel="prefetch" href="/assets/js/30.3beac9a7.js"><link rel="prefetch" href="/assets/js/31.3ee788ac.js"><link rel="prefetch" href="/assets/js/32.6522140e.js"><link rel="prefetch" href="/assets/js/33.24b1949c.js"><link rel="prefetch" href="/assets/js/34.90e39367.js"><link rel="prefetch" href="/assets/js/35.a67486b8.js"><link rel="prefetch" href="/assets/js/36.d9ffefc3.js"><link rel="prefetch" href="/assets/js/37.e3a99db4.js"><link rel="prefetch" href="/assets/js/38.8e250355.js"><link rel="prefetch" href="/assets/js/39.fc7bdfc1.js"><link rel="prefetch" href="/assets/js/4.9805163b.js"><link rel="prefetch" href="/assets/js/40.454bd56a.js"><link rel="prefetch" href="/assets/js/41.a235b641.js"><link rel="prefetch" href="/assets/js/42.af91ee0f.js"><link rel="prefetch" href="/assets/js/43.ee9374e7.js"><link rel="prefetch" href="/assets/js/44.36c8feb3.js"><link rel="prefetch" href="/assets/js/45.d8301c73.js"><link rel="prefetch" href="/assets/js/46.9a5a32af.js"><link rel="prefetch" href="/assets/js/47.d58b6a64.js"><link rel="prefetch" href="/assets/js/48.f02903e0.js"><link rel="prefetch" href="/assets/js/49.19767842.js"><link rel="prefetch" href="/assets/js/5.c3d6e4f2.js"><link rel="prefetch" href="/assets/js/50.48750e81.js"><link rel="prefetch" href="/assets/js/51.c4254bbf.js"><link rel="prefetch" href="/assets/js/52.b343e884.js"><link rel="prefetch" href="/assets/js/53.98458ade.js"><link rel="prefetch" href="/assets/js/54.fde5639b.js"><link rel="prefetch" href="/assets/js/55.1d6eee4b.js"><link rel="prefetch" href="/assets/js/56.b00d9d45.js"><link rel="prefetch" href="/assets/js/57.eaec60f9.js"><link rel="prefetch" href="/assets/js/58.4b703868.js"><link rel="prefetch" href="/assets/js/59.26a30b6e.js"><link rel="prefetch" href="/assets/js/6.c77dab88.js"><link rel="prefetch" href="/assets/js/60.eb33df05.js"><link rel="prefetch" href="/assets/js/61.d173fa46.js"><link rel="prefetch" href="/assets/js/62.429026f8.js"><link rel="prefetch" href="/assets/js/63.b58a3d49.js"><link rel="prefetch" href="/assets/js/64.851d5d76.js"><link rel="prefetch" href="/assets/js/65.674d6d9d.js"><link rel="prefetch" href="/assets/js/66.ececc579.js"><link rel="prefetch" href="/assets/js/67.b733240a.js"><link rel="prefetch" href="/assets/js/68.6e4191d3.js"><link rel="prefetch" href="/assets/js/69.699a59ea.js"><link rel="prefetch" href="/assets/js/7.76f628a5.js"><link rel="prefetch" href="/assets/js/70.4f4dcf9b.js"><link rel="prefetch" href="/assets/js/71.ed9703c6.js"><link rel="prefetch" href="/assets/js/72.b6d86aab.js"><link rel="prefetch" href="/assets/js/73.d835d9fc.js"><link rel="prefetch" href="/assets/js/74.ee7c0011.js"><link rel="prefetch" href="/assets/js/75.4db81ffe.js"><link rel="prefetch" href="/assets/js/76.0bfb8bde.js"><link rel="prefetch" href="/assets/js/77.4fb5960f.js"><link rel="prefetch" href="/assets/js/78.20e475a5.js"><link rel="prefetch" href="/assets/js/79.1fda7459.js"><link rel="prefetch" href="/assets/js/8.d2e1201f.js"><link rel="prefetch" href="/assets/js/80.b3da8d44.js"><link rel="prefetch" href="/assets/js/81.d57d0933.js"><link rel="prefetch" href="/assets/js/82.66610608.js"><link rel="prefetch" href="/assets/js/83.96744a0a.js"><link rel="prefetch" href="/assets/js/84.b9a8b20b.js"><link rel="prefetch" href="/assets/js/85.e6836d72.js"><link rel="prefetch" href="/assets/js/86.6ee49a02.js"><link rel="prefetch" href="/assets/js/87.b4c2ee51.js"><link rel="prefetch" href="/assets/js/88.a3470f95.js"><link rel="prefetch" href="/assets/js/89.dbea7400.js"><link rel="prefetch" href="/assets/js/9.2821f128.js"><link rel="prefetch" href="/assets/js/90.880b855c.js"><link rel="prefetch" href="/assets/js/91.34abb20a.js"><link rel="prefetch" href="/assets/js/92.94004492.js"><link rel="prefetch" href="/assets/js/93.e6616392.js"><link rel="prefetch" href="/assets/js/94.dd4b7e1f.js"><link rel="prefetch" href="/assets/js/95.13239188.js"><link rel="prefetch" href="/assets/js/96.5ce4eca8.js"><link rel="prefetch" href="/assets/js/97.3c1bd63b.js"><link rel="prefetch" href="/assets/js/98.13343bd8.js"><link rel="prefetch" href="/assets/js/99.9ce49f9c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b0792086.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open no-sidebar have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="学习笔记" class="logo"> <span class="site-name can-hide">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://img.jssjqd.cn/202303140455599.jpg"> <div class="blogger-info"><h3>江</h3> <span></span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/categories/?category=%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" title="分类" data-v-06225672>设计模式</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="javascript:;" data-v-06225672>江</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2021-12-27</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">装饰者模式<!----></h1>  <div class="theme-vdoing-content content__default"><h3 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h3> <p>本文的主要内容：</p> <ul><li><p>介绍装饰者模式</p></li> <li><p>示例</p></li> <li><p>源码分析装饰者模式的典型应用</p></li> <li><p>Java I/O 中的装饰者模式</p></li> <li><p>spring session 中的装饰者模式</p></li> <li><p>Mybatis 缓存中的装饰者模式</p></li> <li><p>总结</p></li></ul> <h3 id="装饰者模式"><a href="#装饰者模式" class="header-anchor">#</a> 装饰者模式</h3> <p><strong>装饰者模式 (Decorator Pattern)</strong>：动态地给一个对象增加一些额外的职责，增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。</p> <p>在装饰者模式中，为了让系统具有更好的灵活性和可扩展性，我们通常会定义一个抽象装饰类，而将具体的装饰类作为它的子类</p> <h4 id="角色"><a href="#角色" class="header-anchor">#</a> 角色</h4> <p><strong>Component（抽象构件）</strong>：它是具体构件和抽象装饰类的共同父类，声明了在具体构件中实现的业务方法，它的引入可以使客户端以一致的方式处理未被装饰的对象以及装饰之后的对象，实现客户端的透明操作。</p> <p><strong>ConcreteComponent（具体构件）</strong>：它是抽象构件类的子类，用于定义具体的构件对象，实现了在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）。</p> <p><strong>Decorator（抽象装饰类）</strong>：它也是抽象构件类的子类，用于给具体构件增加职责，但是具体职责在其子类中实现。它维护一个指向抽象构件对象的引用，通过该引用可以调用装饰之前构件对象的方法，并通过其子类扩展该方法，以达到装饰的目的。</p> <p><strong>ConcreteDecorator（具体装饰类）</strong>：它是抽象装饰类的子类，负责向构件添加新的职责。每一个具体装饰类都定义了一些新的行为，它可以调用在抽象装饰类中定义的方法，并可以增加新的方法用以扩充对象的行为。</p> <p>由于具体构件类和装饰类都实现了相同的抽象构件接口，因此装饰模式以对客户透明的方式动态地给一个对象附加上更多的责任，换言之，客户端并不会觉得对象在装饰前和装饰后有什么不同。装饰模式可以在不需要创造更多子类的情况下，将对象的功能加以扩展。</p> <p>装饰模式的<strong>核心在于抽象装饰类的设计</strong>。</p> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <p>煎饼抽象类</p> <div class="language- extra-class"><pre class="language-text"><code>public abstract class ABattercake {    
+	protected abstract String getDesc();   
+	protected abstract int cost();
+}
+</code></pre></div><p>煎饼类，继承了煎饼抽象类，一个煎饼 8 块钱</p> <div class="language- extra-class"><pre class="language-text"><code>public class Battercake extends ABattercake {    
+
+ 	@Override    
+ 	protected String getDesc() {        
+ 	return &quot;煎饼&quot;;    
+ 	}    
+ 	@Override    
+ 	protected int cost() {       
+    return 8;    
+    }
+    
+}
+</code></pre></div><p>抽象装饰类，需要注意的是，<strong>抽象装饰类通过成员属性的方式将 煎饼抽象类组合进来，同时也继承了煎饼抽象类</strong>，且这里定义了新的业务方法 <code>doSomething()</code></p> <div class="language- extra-class"><pre class="language-text"><code>public abstract class AbstractDecorator extends ABattercake {    
+
+    private ABattercake aBattercake;   
+    public AbstractDecorator(ABattercake aBattercake) {        
+        this.aBattercake = aBattercake;    
+    }    
+    protected abstract void doSomething();    
+    @Override    
+    protected String getDesc() {        
+        return this.aBattercake.getDesc();   
+         }    
+    @Override   
+    protected int cost() {        
+        return this.aBattercake.cost();    
+    }
+}
+</code></pre></div><p>鸡蛋装饰器，继承了抽象装饰类，鸡蛋装饰器在父类的基础上增加了一个鸡蛋，同时价格加上 1 块钱</p> <div class="language- extra-class"><pre class="language-text"><code>public class EggDecorator extends AbstractDecorator { 
+
+    public EggDecorator(ABattercake aBattercake) {       
+   		super(aBattercake);   
+    }  
+    
+    @Override   
+    protected void doSomething() {    
+    } 
+    
+    @Override    
+    protected String getDesc() {        
+    	return super.getDesc() + &quot; 加一个鸡蛋&quot;;    
+    }   
+    
+    @Override    
+    protected int cost() {        
+    return super.cost() + 1;   
+    }    
+    public void egg() {       
+    System.out.println(&quot;增加了一个鸡蛋&quot;);    
+    }
+}
+</code></pre></div><p>香肠装饰器，与鸡蛋装饰器类似，继承了抽象装饰类，给在父类的基础上加上一根香肠，同时价格增加 2 块钱</p> <div class="language- extra-class"><pre class="language-text"><code>public class SausageDecorator extends AbstractDecorator{    
+
+    public SausageDecorator(ABattercake aBattercake) {        
+        super(aBattercake);   
+    }   
+    
+    @Override   
+        protected void doSomething() {    
+    }   
+    
+    @Override   
+    protected String getDesc() {        
+        return super.getDesc() + &quot; 加一根香肠&quot;;    
+    }  
+    
+    @Override    
+    protected int cost() {        
+        return super.cost() + 2;    
+    }
+    
+}
+</code></pre></div><h4 id="测试-购买煎饼"><a href="#测试-购买煎饼" class="header-anchor">#</a> 测试，购买煎饼</h4> <p><strong>1、购买一个煎饼</strong></p> <div class="language- extra-class"><pre class="language-text"><code>public class Test {    
+	public static void main(String[] args) {       
+	ABattercake aBattercake = new Battercake();        
+	System.out.println(aBattercake.getDesc() + &quot;, 销售价格: &quot; + aBattercake.cost());    
+	}
+}
+</code></pre></div><p>输出</p> <div class="language- extra-class"><pre class="language-text"><code>煎饼, 销售价格: 8
+</code></pre></div><p><strong>2、购买一个加鸡蛋的煎饼</strong></p> <div class="language- extra-class"><pre class="language-text"><code>public class Test {    
+	public static void main(String[] args) {        
+	ABattercake aBattercake = new Battercake();        
+	aBattercake = new EggDecorator(aBattercake);        
+	System.out.println(aBattercake.getDesc() + &quot;, 销售价格: &quot; + aBattercake.cost());    
+	}
+}
+</code></pre></div><p>输出</p> <div class="language- extra-class"><pre class="language-text"><code>煎饼 加一个鸡蛋, 销售价格: 9
+</code></pre></div><p><strong>3、购买一个加两个鸡蛋的煎饼</strong></p> <div class="language- extra-class"><pre class="language-text"><code>public class Test {    
+    public static void main(String[] args) {       
+        ABattercake aBattercake = new Battercake();       
+        aBattercake = new EggDecorator(aBattercake);        
+        aBattercake = new EggDecorator(aBattercake);        
+        System.out.println(aBattercake.getDesc() + &quot;, 销售价格: &quot; + aBattercake.cost());   
+    }
+}
+</code></pre></div><p>输出</p> <div class="language- extra-class"><pre class="language-text"><code>煎饼 加一个鸡蛋 加一个鸡蛋, 销售价格: 10
+</code></pre></div><p><strong>4、购买一个加两个鸡蛋和一根香肠的煎饼</strong></p> <div class="language- extra-class"><pre class="language-text"><code>public class Test {    
+    public static void main(String[] args) {        
+        ABattercake aBattercake = new Battercake();        
+        aBattercake = new EggDecorator(aBattercake);        
+        aBattercake = new EggDecorator(aBattercake);        
+        aBattercake = new SausageDecorator(aBattercake);        
+        System.out.println(aBattercake.getDesc() + &quot;, 销售价格: &quot; + aBattercake.cost());    
+    }
+}
+</code></pre></div><p>输出</p> <div class="language- extra-class"><pre class="language-text"><code>煎饼 加一个鸡蛋 加一个鸡蛋 加一根香肠, 销售价格: 12
+</code></pre></div><p>画出 UML 类图如下所示</p> <p><img src="http://img.jssjqd.cn/20200708175926.png" alt=""></p> <p>装饰者模式类图</p> <h4 id="小结一下"><a href="#小结一下" class="header-anchor">#</a> 小结一下</h4> <p>由于具体构件类和装饰类都实现了相同的抽象构件接口，因此装饰模式以对客户透明的方式动态地给一个对象附加上更多的责任，换言之，客户端并不会觉得对象在装饰前和装饰后有什么不同。</p> <p>譬如我们给煎饼加上一个鸡蛋可以这么写 <code>aBattercake = new EggDecorator(aBattercake);</code>，客户端仍然可以把 <code>aBattercake</code> 当成原来的 <code>aBattercake</code>一样，不过现在的 <code>aBattercake</code>已经被装饰加上了鸡蛋</p> <p>装饰模式可以在不需要创造更多子类的情况下，将对象的功能加以扩展。</p> <h4 id="透明装饰模式与半透明装饰模式"><a href="#透明装饰模式与半透明装饰模式" class="header-anchor">#</a> 透明装饰模式与半透明装饰模式</h4> <p>在上面的示例中，装饰后的对象是通过抽象构建类类型 <code>ABattercake</code> 的变量来引用的，在鸡蛋装饰器这个类中我们新增了 <code>egg()</code> 方法，如果此时我们想要<strong>单独调用该方法</strong>是调用不到的</p> <p>除非引用变量的类型改为 <code>EggDecorator</code>，这样就可以调用了</p> <div class="language- extra-class"><pre class="language-text"><code>EggDecorator eggBattercake = new EggDecorator(aBattercake); eggBattercake.egg();
+</code></pre></div><p>在实际使用过程中，由于新增行为可能需要单独调用，因此这种形式的装饰模式也经常出现，这种装饰模式被称为<strong>半透明 (Semi-transparent) 装饰模式</strong>，而标准的装饰模式是<strong>透明 (Transparent) 装饰模式</strong>。</p> <p><strong>(1) 透明装饰模式</strong></p> <p>在透明装饰模式中，要求客户端完全针对抽象编程，装饰模式的透明性要求客户端程序不应该将对象声明为具体构件类型或具体装饰类型，而应该全部声明为抽象构件类型。</p> <p><strong>(2) 半透明装饰模式</strong></p> <p>透明装饰模式的设计难度较大，而且有时我们需要单独调用新增的业务方法。为了能够调用到新增方法，我们不得不用具体装饰类型来定义装饰之后的对象，而具体构件类型还是可以使用抽象构件类型来定义，这种装饰模式即为半透明装饰模式。</p> <p>半透明装饰模式可以给系统带来更多的灵活性，设计相对简单，使用起来也非常方便；但是其最大的缺点在于<strong>不能实现对同一个对象的多次装饰</strong>，而且客户端需要有区别地对待装饰之前的对象和装饰之后的对象。</p> <h4 id="装饰模式注意事项"><a href="#装饰模式注意事项" class="header-anchor">#</a> 装饰模式注意事项</h4> <p>(1) 尽量保持装饰类的接口与被装饰类的接口相同，这样，对于客户端而言，无论是装饰之前的对象还是装饰之后的对象都可以一致对待。这也就是说，在可能的情况下，我们应该尽量使用透明装饰模式。</p> <p>(2) 尽量保持具体构件类是一个 “轻” 类，也就是说不要把太多的行为放在具体构件类中，我们可以通过装饰类对其进行扩展。</p> <p>(3) 如果只有一个具体构件类，那么抽象装饰类可以作为该具体构件类的直接子类。</p> <h3 id="源码分析装饰者模式的典型应用"><a href="#源码分析装饰者模式的典型应用" class="header-anchor">#</a> 源码分析装饰者模式的典型应用</h3> <h4 id="java-i-o-中的装饰者模式"><a href="#java-i-o-中的装饰者模式" class="header-anchor">#</a> Java I/O 中的装饰者模式</h4> <p>使用 Java I/O 的时候总是有各种输入流、输出流、字符流、字节流、过滤流、缓冲流等等各种各样的流，不熟悉里边的设计模式的话总会看得云里雾里的，现在通过设计模式的角度来看 Java I/O，会好理解很多。</p> <p>先用一幅图来看看 Java I/O 到底是什么，下面的这幅图生动的刻画了 Java I/O 的作用。</p> <p><img src="http://img.jssjqd.cn/20200708180017.png" alt="">Java I/O 的作用图</p> <p>由上图可知在 Java 中应用程序通过输入流（InputStream）的 Read 方法从源地址处读取字节，然后通过输出流（OutputStream）的 Write 方法将流写入到目的地址。</p> <p>流的来源主要有三种：本地的文件（File）、控制台、通过 socket 实现的网络通信</p> <p>下面的图可以看出 Java 中的装饰者类和被装饰者类以及它们之间的关系，这里只列出了 InputStream 中的关系：</p> <p><img src="http://img.jssjqd.cn/20200708180119.png" alt="">InputStream 部分类关系</p> <p>由上图可以看出只要继承了 FilterInputStream 的类就是装饰者类，可以用于包装其他的流，装饰者类还可以对装饰者和类进行再包装。</p> <p><strong>这里总结几种常用流的应用场景</strong>：</p> <table><thead><tr><th>流名称</th> <th>应用场景</th></tr></thead> <tbody><tr><td>ByteArrayInputStream</td> <td>访问数组，把内存中的一个缓冲区作为 InputStream 使用，CPU 从缓存区读取数据比从存储介质的速率快 10 倍以上</td></tr> <tr><td>StringBufferInputStream</td> <td>把一个 String 对象作为。InputStream。不建议使用，在转换字符的问题上有缺陷</td></tr> <tr><td>FileInputStream</td> <td>访问文件，把一个文件作为 InputStream ，实现对文件的读取操作</td></tr> <tr><td>PipedInputStream</td> <td>访问管道，主要在线程中使用，一个线程通过管道输出流发送数据，而另一个线程通过管道输入流读取数据，这样可实现两个线程间的通讯</td></tr> <tr><td>SequenceInputStream</td> <td>把多个 InputStream 合并为一个 InputStream . “序列输入流” 类允许应用程序把几个输入流连续地合并起来</td></tr> <tr><td>DataInputStream</td> <td>特殊流，读各种基本类型数据, 如 byte、int、String 的功能</td></tr> <tr><td>ObjectInputStream</td> <td>对象流，读对象的功能</td></tr> <tr><td>PushBackInputStream</td> <td>推回输入流，可以把读取进来的某些数据重新回退到输入流的缓冲区之中</td></tr> <tr><td>BufferedInputStream</td> <td>缓冲流，增加了缓冲功能</td></tr></tbody></table> <p><strong>下面看一下 Java 中包装流的实例</strong>：</p> <div class="language- extra-class"><pre class="language-text"><code>import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class StreamDemo {    
+    public static void main(String[] args) throws IOException{        
+        DataInputStream in=new DataInputStream(new BufferedInputStream(new  FileInputStream(&quot;D:\\hello.txt&quot;)));       
+        while(in.available()!=0) {           
+        System.out.print((char)in.readByte());        
+        }        
+        in.close();    
+    }
+}
+</code></pre></div><p>输出结果</p> <div class="language- extra-class"><pre class="language-text"><code>hello world!hello Java I/O!
+</code></pre></div><p>上面程序中对流进行了两次包装，先用 BufferedInputStream 将 FileInputStream 包装成缓冲流也就是给 FileInputStream 增加缓冲功能，再 DataInputStream 进一步包装方便数据处理。</p> <p>如果要<strong>实现一个自己的包装流</strong>，根据上面的类图，需要继承抽象装饰类 FilterInputStream</p> <p>譬如来实现这样一个操作的装饰者类：将输入流中的所有小写字母变成大写字母</p> <div class="language- extra-class"><pre class="language-text"><code>import java.io.FileInputStream;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+public class UpperCaseInputStream extends FilterInputStream {    
+
+    protected UpperCaseInputStream(InputStream in) {        
+    	super(in);   
+    }    
+
+    @Override    
+    public int read() throws IOException {        
+        int c = super.read();       
+        return (c == -1 ? c : Character.toUpperCase(c));    
+    }    
+    @Override    
+    public int read(byte[] b, int off, int len) throws IOException {        
+        int result = super.read(b, off, len);        
+        for (int i = off; i &lt; off + result; i++) {           
+        b[i] = (byte) Character.toUpperCase((char) b[i]);        
+    }       
+    	return result;    
+    }    
+    public static void main(String[] args) throws IOException {        
+        int c;        
+        InputStream in = new UpperCaseInputStream(new FileInputStream(&quot;D:\\hello.txt&quot;));        
+        try {            
+        while ((c = in.read()) &gt;= 0) {                
+        System.out.print((char) c);           
+        }        } 
+        finally {            
+        in.close();        
+    	}    
+    }
+}
+</code></pre></div><p>输出</p> <div class="language- extra-class"><pre class="language-text"><code>HELLO WORLD!HELLO JAVA I/O!
+</code></pre></div><p>整个 Java IO 体系都是基于字符流 (InputStream/OutputStream) 和 字节流(Reader/Writer) 作为基类，下面画出 OutputStream、Reader、Writer 的部分类图，更多细节请查看其它资料</p> <p><img src="http://img.jssjqd.cn/20200708180210.png" alt="">OutputStream 类图<img src="http://img.jssjqd.cn/20200708180309.png" alt=""></p> <p>Reader 类图<img src="http://img.jssjqd.cn/20200708180336.png" alt=""> Writer 类图</p> <h4 id="spring-cache-中的装饰者模式"><a href="#spring-cache-中的装饰者模式" class="header-anchor">#</a> spring cache 中的装饰者模式</h4> <p>看 <code>org.springframework.cache.transaction</code> 包下的 <code>TransactionAwareCacheDecorator</code> 这个类</p> <div class="language- extra-class"><pre class="language-text"><code>public class TransactionAwareCacheDecorator implements Cache {    
+
+    private final Cache targetCache;  
+    
+    public TransactionAwareCacheDecorator(Cache targetCache) { 
+    
+        Assert.notNull(targetCache, &quot;Target Cache must not be null&quot;);        
+        this.targetCache = targetCache;  
+        
+    }    
+    public &lt;T&gt; T get(Object key, Class&lt;T&gt; type) {        
+    	
+    	return this.targetCache.get(key, type);  
+        
+    }    
+    
+    public void put(final Object key, final Object value) { 
+    
+    // 判断是否开启了事务        
+    if (TransactionSynchronizationManager.isSynchronizationActive()) {           
+    // 将操作注册到 afterCommit 阶段            
+    TransactionSynchronizationManager.registerSynchronization(
+        new TransactionSynchronizationAdapter() {                
+        public void afterCommit() {                    
+        TransactionAwareCacheDecorator.this.targetCache.put(key, value);               
+        }            
+    });
+    } else {            
+        this.targetCache.put(key, value);        
+    }    
+    }    
+    // ...省略...
+}
+</code></pre></div><p>该类实现了 <code>Cache</code> 接口，同时将 <code>Cache</code> 组合到类中成为了成员属性 <code>targetCache</code>，所以可以大胆猜测 <code>TransactionAwareCacheDecorator</code> 是一个装饰类，不过这里并没有抽象装饰类，且 <code>TransactionAwareCacheDecorator</code> 没有子类，这里的装饰类关系并没有 Java I/O 中的装饰关系那么复杂</p> <p><img src="http://img.jssjqd.cn/20200708180408.png" alt=""></p> <p>spring cache 中类图关系</p> <p>该类的主要功能：通过 Spring 的 <code>TransactionSynchronizationManager</code> 将其 <code>put/evict/clear</code> 操作与 Spring 管理的事务同步，仅在成功的事务的 <code>after-commit</code> 阶段执行实际的缓存 <code>put/evict/clear</code> 操作。如果没有事务是 <code>active</code> 的，将立即执行 <code>put/evict/clear</code> 操作</p> <h4 id="spring-session-中的装饰者模式"><a href="#spring-session-中的装饰者模式" class="header-anchor">#</a> spring session 中的装饰者模式</h4> <blockquote><p>注意：适配器模式的结尾也可能是 Wrapper</p></blockquote> <p>类 <code>ServletRequestWrapper</code> 的代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>public class ServletRequestWrapper implements ServletRequest {   
+
+    private ServletRequest request;    
+    
+    public ServletRequestWrapper(ServletRequest request) {        
+        if (request == null) {            
+        throw new IllegalArgumentException(&quot;Request cannot be null&quot;);        
+        }        
+    	this.request = request;    
+    }    
+    
+    @Override    
+    public Object getAttribute(String name) {        
+    	return this.request.getAttribute(name);    
+    }    
+    //...省略...
+}
+</code></pre></div><p>可以看到该类对 <code>ServletRequest</code> 进行了包装，这里是一个装饰者模式，再看下图，spring session 中 <code>SessionRepositoryFilter</code> 的一个内部类 <code>SessionRepositoryRequestWrapper</code> 与 <code>ServletRequestWrapper</code> 的关系</p> <p><img src="http://img.jssjqd.cn/20200708180436.png" alt=""></p> <p>ServletRequest 类图</p> <p>可见 <code>ServletRequestWrapper</code> 是第一层包装，<code>HttpServletRequestWrapper</code> 通过继承进行包装，增加了 HTTP 相关的功能，<code>SessionRepositoryRequestWrapper</code> 又通过继承进行包装，增加了 Session 相关的功能</p> <h4 id="mybatis-缓存中的装饰者模式"><a href="#mybatis-缓存中的装饰者模式" class="header-anchor">#</a> Mybatis 缓存中的装饰者模式</h4> <p><code>org.apache.ibatis.cache</code> 包的文件结构如下所示</p> <p><img src="http://img.jssjqd.cn/20200708180505.png" alt=""></p> <p>Mybatis cache 中的装饰者模式</p> <p>我们通过类所在的包名即可判断出该类的角色，<code>Cache</code> 为抽象构件类，<code>PerpetualCache</code> 为具体构件类，<code>decorators</code> 包下的类为装饰类，没有抽象装饰类</p> <p>通过名称也可以判断出装饰类所要装饰的功能</p> <h3 id="装饰者模式总结"><a href="#装饰者模式总结" class="header-anchor">#</a> 装饰者模式总结</h3> <p>装饰模式的<strong>主要优点</strong>如下：</p> <ol><li><p>对于扩展一个对象的功能，装饰模式比继承更加灵活性，不会导致类的个数急剧增加。</p></li> <li><p>可以通过一种动态的方式来扩展一个对象的功能，通过配置文件可以在运行时选择不同的具体装饰类，从而实现不同的行为。</p></li> <li><p>可以对一个对象进行多次装饰，通过使用不同的具体装饰类以及这些装饰类的排列组合，可以创造出很多不同行为的组合，得到功能更为强大的对象。</p></li> <li><p>具体构件类与具体装饰类可以独立变化，用户可以根据需要增加新的具体构件类和具体装饰类，原有类库代码无须改变，符合 “开闭原则”。</p></li></ol> <p>装饰模式的<strong>主要缺点</strong>如下：</p> <ol><li><p>使用装饰模式进行系统设计时将产生很多小对象，这些对象的区别在于它们之间相互连接的方式有所不同，而不是它们的类或者属性值有所不同，大量小对象的产生势必会占用更多的系统资源，在一定程序上影响程序的性能。</p></li> <li><p>装饰模式提供了一种比继承更加灵活机动的解决方案，但同时也意味着比继承更加易于出错，排错也很困难，对于多次装饰的对象，调试时寻找错误可能需要逐级排查，较为繁琐。</p></li></ol> <p><strong>适用场景</strong>：</p> <ol><li><p>在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。</p></li> <li><p>当不能采用继承的方式对系统进行扩展或者采用继承不利于系统扩展和维护时可以使用装饰模式。不能采用继承的情况主要有两类：第一类是系统中存在大量独立的扩展，为支持每一种扩展或者扩展之间的组合将产生大量的子类，使得子类数目呈爆炸性增长；第二类是因为类已定义为不能被继承（如 Java 语言中的 final 类）。</p></li></ol> <blockquote><p>参考：  <br>
+刘伟：设计模式 Java 版  <br>
+慕课网 java 设计模式精讲 Debug 方式 + 内存分析    <br>
+Java 日志框架：slf4j 作用及其实现原理  <br>
+HankingHu：由装饰者模式来深入理解 Java I/O 整体框架  <br>
+HryReal：Java 的 io 类的使用场景</p></blockquote></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/03/18, 15:17:13</span></div></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/bc8703/"><div>
+            JVM调优实战及常量池详解
+            <!----></div></a> <span class="date">03-14</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/5f19b8/"><div>
+            Spring底层核心原理解析
+            <!----></div></a> <span class="date">01-01</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/5a94a3/"><div>
+            ElasticSearch 高级查询语法Query DSL实战
+            <!----></div></a> <span class="date">12-11</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:894072666@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/xugaoyi" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2023
+    <span>江</span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.73613012.js" defer></script><script src="/assets/js/2.1211d3e1.js" defer></script><script src="/assets/js/14.e2a3317c.js" defer></script>
+  </body>
+</html>
