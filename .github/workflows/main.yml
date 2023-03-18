@@ -45,6 +45,7 @@ jobs:
         run: yarn
       - name: build
         run: npm run build
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
