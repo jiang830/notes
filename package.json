@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "bash deploy.sh",
+    "deploy": "bash deploy",
     "editFm": "node utils/editFrontmatter.js",
     "baiduPush": "",
     "publish": "cd ./vdoing && npm publish && cd .. && yarn updateTheme",
