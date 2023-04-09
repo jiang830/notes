@@ -17,3 +17,5 @@ urls.txt
 
 # mac
 .DS_Store
+/docs/.vuepress/.temp/
+/docs/.vuepress/.temp/pages/
