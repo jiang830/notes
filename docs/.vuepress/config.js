@@ -6,9 +6,8 @@ module.exports = {
   // theme: require.resolve('../../theme-vdoing'), // 使用本地主题
 
   title: "学习笔记",
-  description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
-  // base: '/notes/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
-  base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
+  description: '',
+  base: '', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
   // 主题配置
   themeConfig: {
     // 导航配置
@@ -121,7 +120,7 @@ module.exports = {
 
 
     bodyBgImg: [
-      'https://img.jssjqd.cn/202303140502056.jpg'
+      'https://img.jssjqd.cn/202304110253646.jpg'
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
     // bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
@@ -152,7 +151,7 @@ module.exports = {
     // 博主信息，显示在首页侧边栏
     blogger: {
       avatar: 'https://img.jssjqd.cn/202303140455599.jpg',
-      name: '江',
+      name: '',
       slogan: '',
     },
 
@@ -182,7 +181,7 @@ module.exports = {
     footer: {
       createYear: 2019, // 博客创建年份
       copyrightInfo:
-        '江', // 博客版权信息，支持a标签
+        '| <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18050343号-2</a>', // 博客版权信息，支持a标签
     },
 
     // 插入hmtl(广告)模块
