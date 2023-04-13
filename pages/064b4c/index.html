@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>微服务调用组件Feign&amp;Dubbo实战 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="个人技术博客,技术文档,学习,面试,markdown">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.80e00cb3.css" as="style"><link rel="preload" href="/assets/js/app.e232df78.js" as="script"><link rel="preload" href="/assets/js/2.712f36ff.js" as="script"><link rel="preload" href="/assets/js/92.8164d2fd.js" as="script"><link rel="prefetch" href="/assets/js/10.79f90b54.js"><link rel="prefetch" href="/assets/js/100.cd9133a3.js"><link rel="prefetch" href="/assets/js/101.4c8b3de6.js"><link rel="prefetch" href="/assets/js/102.63efa47e.js"><link rel="prefetch" href="/assets/js/103.c647e78a.js"><link rel="prefetch" href="/assets/js/104.a07d523e.js"><link rel="prefetch" href="/assets/js/105.956e1ebf.js"><link rel="prefetch" href="/assets/js/106.0bd6dae2.js"><link rel="prefetch" href="/assets/js/107.848f6c96.js"><link rel="prefetch" href="/assets/js/108.54ce48fb.js"><link rel="prefetch" href="/assets/js/109.78de9281.js"><link rel="prefetch" href="/assets/js/11.72d2a105.js"><link rel="prefetch" href="/assets/js/110.cff489b7.js"><link rel="prefetch" href="/assets/js/111.8756c930.js"><link rel="prefetch" href="/assets/js/112.6376efd4.js"><link rel="prefetch" href="/assets/js/113.84c8c634.js"><link rel="prefetch" href="/assets/js/114.45fb71e5.js"><link rel="prefetch" href="/assets/js/12.702cfabb.js"><link rel="prefetch" href="/assets/js/13.e6ed07d0.js"><link rel="prefetch" href="/assets/js/14.d4895d97.js"><link rel="prefetch" href="/assets/js/15.be0b2498.js"><link rel="prefetch" href="/assets/js/16.9cbb07dc.js"><link rel="prefetch" href="/assets/js/17.ae80c005.js"><link rel="prefetch" href="/assets/js/18.41b2037e.js"><link rel="prefetch" href="/assets/js/19.0d80d192.js"><link rel="prefetch" href="/assets/js/20.9227e85a.js"><link rel="prefetch" href="/assets/js/21.97be6ed2.js"><link rel="prefetch" href="/assets/js/22.be61ffb1.js"><link rel="prefetch" href="/assets/js/23.3a39ac58.js"><link rel="prefetch" href="/assets/js/24.885ccd31.js"><link rel="prefetch" href="/assets/js/25.4d90ed52.js"><link rel="prefetch" href="/assets/js/26.82068fa3.js"><link rel="prefetch" href="/assets/js/27.73898638.js"><link rel="prefetch" href="/assets/js/28.ecf93e53.js"><link rel="prefetch" href="/assets/js/29.7be39b64.js"><link rel="prefetch" href="/assets/js/3.cdd37bee.js"><link rel="prefetch" href="/assets/js/30.89328833.js"><link rel="prefetch" href="/assets/js/31.d14a8fc8.js"><link rel="prefetch" href="/assets/js/32.0ce0041a.js"><link rel="prefetch" href="/assets/js/33.1f3abdce.js"><link rel="prefetch" href="/assets/js/34.eee2a883.js"><link rel="prefetch" href="/assets/js/35.78ea8ca9.js"><link rel="prefetch" href="/assets/js/36.adb5b83a.js"><link rel="prefetch" href="/assets/js/37.52a8645b.js"><link rel="prefetch" href="/assets/js/38.49c7286c.js"><link rel="prefetch" href="/assets/js/39.f99d3d35.js"><link rel="prefetch" href="/assets/js/4.bae9e911.js"><link rel="prefetch" href="/assets/js/40.621c7dd7.js"><link rel="prefetch" href="/assets/js/41.0ef5b18e.js"><link rel="prefetch" href="/assets/js/42.904f70d1.js"><link rel="prefetch" href="/assets/js/43.5e518c0b.js"><link rel="prefetch" href="/assets/js/44.6f9c451b.js"><link rel="prefetch" href="/assets/js/45.42727041.js"><link rel="prefetch" href="/assets/js/46.b9d5a1f2.js"><link rel="prefetch" href="/assets/js/47.0aaa423c.js"><link rel="prefetch" href="/assets/js/48.c18e972f.js"><link rel="prefetch" href="/assets/js/49.1d67db3f.js"><link rel="prefetch" href="/assets/js/5.f1a94486.js"><link rel="prefetch" href="/assets/js/50.ecfbc5f7.js"><link rel="prefetch" href="/assets/js/51.9a473700.js"><link rel="prefetch" href="/assets/js/52.84ccdd6a.js"><link rel="prefetch" href="/assets/js/53.543a15f1.js"><link rel="prefetch" href="/assets/js/54.93d5cc48.js"><link rel="prefetch" href="/assets/js/55.8c359df5.js"><link rel="prefetch" href="/assets/js/56.2e0774d4.js"><link rel="prefetch" href="/assets/js/57.44390766.js"><link rel="prefetch" href="/assets/js/58.5a103736.js"><link rel="prefetch" href="/assets/js/59.f2c27b47.js"><link rel="prefetch" href="/assets/js/6.0d937ada.js"><link rel="prefetch" href="/assets/js/60.c8c926f8.js"><link rel="prefetch" href="/assets/js/61.a4e0a07d.js"><link rel="prefetch" href="/assets/js/62.caafc7cd.js"><link rel="prefetch" href="/assets/js/63.53fb767a.js"><link rel="prefetch" href="/assets/js/64.3e0cea09.js"><link rel="prefetch" href="/assets/js/65.84b642e8.js"><link rel="prefetch" href="/assets/js/66.067f7d2e.js"><link rel="prefetch" href="/assets/js/67.b1aaaadd.js"><link rel="prefetch" href="/assets/js/68.0292eef7.js"><link rel="prefetch" href="/assets/js/69.6cb6dd73.js"><link rel="prefetch" href="/assets/js/7.d7f256d5.js"><link rel="prefetch" href="/assets/js/70.2c1fa852.js"><link rel="prefetch" href="/assets/js/71.0bb9e101.js"><link rel="prefetch" href="/assets/js/72.90c366c1.js"><link rel="prefetch" href="/assets/js/73.61dcbb5f.js"><link rel="prefetch" href="/assets/js/74.5d86ecc0.js"><link rel="prefetch" href="/assets/js/75.bcb9b604.js"><link rel="prefetch" href="/assets/js/76.5530547e.js"><link rel="prefetch" href="/assets/js/77.1de47ecf.js"><link rel="prefetch" href="/assets/js/78.5cdce247.js"><link rel="prefetch" href="/assets/js/79.cc38b365.js"><link rel="prefetch" href="/assets/js/8.61eb6b1a.js"><link rel="prefetch" href="/assets/js/80.e8c3d491.js"><link rel="prefetch" href="/assets/js/81.9b694e86.js"><link rel="prefetch" href="/assets/js/82.8d531e88.js"><link rel="prefetch" href="/assets/js/83.c490b059.js"><link rel="prefetch" href="/assets/js/84.fbf6e9f6.js"><link rel="prefetch" href="/assets/js/85.76939ce8.js"><link rel="prefetch" href="/assets/js/86.b2226522.js"><link rel="prefetch" href="/assets/js/87.866e9f36.js"><link rel="prefetch" href="/assets/js/88.ca540b22.js"><link rel="prefetch" href="/assets/js/89.e919d810.js"><link rel="prefetch" href="/assets/js/9.ac0fc468.js"><link rel="prefetch" href="/assets/js/90.07b9a852.js"><link rel="prefetch" href="/assets/js/91.0a14e929.js"><link rel="prefetch" href="/assets/js/93.3c4e7d51.js"><link rel="prefetch" href="/assets/js/94.182acc65.js"><link rel="prefetch" href="/assets/js/95.85a89737.js"><link rel="prefetch" href="/assets/js/96.b3d1c4ac.js"><link rel="prefetch" href="/assets/js/97.806ee7bc.js"><link rel="prefetch" href="/assets/js/98.bbaf81b1.js"><link rel="prefetch" href="/assets/js/99.9b3666ad.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80e00cb3.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="学习笔记" class="logo"> <span class="site-name can-hide">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://img.jssjqd.cn/202303140455599.jpg"> <div class="blogger-info"><h3></h3> <span></span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>SpringBoot原理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Spring Cloud Alibaba</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/f7b862/" class="sidebar-link">微服务架构</a></li><li><a href="/pages/13f0c8/" class="sidebar-link">Nacos注册中心</a></li><li><a href="/pages/2491fa/" class="sidebar-link">Nacos配置中心</a></li><li><a href="/pages/ed68ae/" class="sidebar-link">负载均衡Ribbon&amp;LoadBalancer实战</a></li><li><a href="/pages/064b4c/" aria-current="page" class="active sidebar-link">微服务调用组件Feign&amp;Dubbo实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/064b4c/#rpc概述" class="sidebar-link">RPC概述</a></li><li class="sidebar-sub-header level2"><a href="/pages/064b4c/#什么是feign" class="sidebar-link">什么是Feign</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#ribbon-feign对比" class="sidebar-link">Ribbon&amp;Feign对比</a></li><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#feign的设计架构" class="sidebar-link">Feign的设计架构</a></li><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#spring-cloud-alibaba快速整合feign" class="sidebar-link">Spring Cloud Alibaba快速整合Feign</a></li><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#spring-cloud-feign扩展" class="sidebar-link">Spring Cloud Feign扩展</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/064b4c/#spring-cloud整合dubbo" class="sidebar-link">Spring Cloud整合Dubbo</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#provider端配置" class="sidebar-link">provider端配置</a></li><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#consumer端配置" class="sidebar-link">consumer端配置</a></li><li class="sidebar-sub-header level3"><a href="/pages/064b4c/#从open-feign迁移到dubbo" class="sidebar-link">从Open Feign迁移到Dubbo</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/categories/?category=%E5%BE%AE%E6%9C%8D%E5%8A%A1" title="分类" data-v-06225672>微服务</a></li><li data-v-06225672><a href="/categories/?category=Spring%20Cloud%20Alibaba" title="分类" data-v-06225672>Spring Cloud Alibaba</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="javascript:;" data-v-06225672>江</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-04-11</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">微服务调用组件Feign&amp;Dubbo实战<!----></h1>  <div class="theme-vdoing-content content__default"><h2 id="rpc概述"><a href="#rpc概述" class="header-anchor">#</a> RPC概述</h2> <p>思考： 微服务之间如何方便优雅的实现服务间的远程调用？</p> <p>RPC 全称是 Remote Procedure Call ，即远程过程调用，其对应的是我们的本地调用。RPC 的目的是：让我们调用远程方法像调用本地方法一样。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//本地调用</span>
+<span class="token class-name">R</span> result <span class="token operator">=</span> orderService<span class="token punctuation">.</span><span class="token function">findOrderByUserId</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//RPC远程调用  orderService为代理对象</span>
+<span class="token class-name">R</span> result <span class="token operator">=</span> orderService<span class="token punctuation">.</span><span class="token function">findOrderByUserId</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>           
+</code></pre></div><p><strong>RPC框架设计架构</strong></p> <p>​    <img src="https://img.jssjqd.cn/202304111616821.png" alt="image-20230411161606417"></p> <h2 id="什么是feign"><a href="#什么是feign" class="header-anchor">#</a> 什么是Feign</h2> <p>Feign是Netflix开发的声明式、模板化的HTTP客户端，Feign可帮助我们更加便捷、优雅地调用HTTP API。</p> <p>Feign可以做到使用 HTTP 请求远程服务时就像调用本地方法一样的体验，开发者完全感知不到这是远程方法，更感知不到这是个 HTTP 请求。它像 Dubbo 一样，consumer 直接调用接口方法调用 provider，而不需要通过常规的 Http Client 构造请求再解析返回数据。它解决了让开发者调用远程接口就跟调用本地方法一样，无需关注与远程的交互细节，更无需关注分布式环境开发。</p> <p>Spring Cloud openfeign对Feign进行了增强，使其支持Spring MVC注解，另外还整合了Ribbon和Eureka，从而使得Feign的使用更加方便。</p> <h3 id="ribbon-feign对比"><a href="#ribbon-feign对比" class="header-anchor">#</a> Ribbon&amp;Feign对比</h3> <p><strong>Ribbon+RestTemplate进行微服务调用</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Bean</span>
+<span class="token annotation punctuation">@LoadBalanced</span>
+<span class="token keyword">public</span> <span class="token class-name">RestTemplate</span> <span class="token function">restTemplate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">RestTemplate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//调用方式</span>
+<span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string">&quot;http://mall-order/order/findOrderByUserId/&quot;</span><span class="token operator">+</span>id<span class="token punctuation">;</span>
+<span class="token class-name">R</span> result <span class="token operator">=</span> restTemplate<span class="token punctuation">.</span><span class="token function">getForObject</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span><span class="token class-name">R</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         
+</code></pre></div><p><strong>Feign进行微服务调用</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;mall-order&quot;</span><span class="token punctuation">,</span>path <span class="token operator">=</span> <span class="token string">&quot;/order&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">OrderFeignService</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/findOrderByUserId/{userId}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">R</span> <span class="token function">findOrderByUserId</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;userId&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Autowired</span>
+<span class="token class-name">OrderFeignService</span> orderFeignService<span class="token punctuation">;</span>
+<span class="token comment">//feign调用</span>
+<span class="token class-name">R</span> result <span class="token operator">=</span> orderFeignService<span class="token punctuation">.</span><span class="token function">findOrderByUserId</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="feign的设计架构"><a href="#feign的设计架构" class="header-anchor">#</a> Feign的设计架构</h3> <p><img src="https://img.jssjqd.cn/202304111617089.png" alt="image-20230411161743901"></p> <h3 id="spring-cloud-alibaba快速整合feign"><a href="#spring-cloud-alibaba快速整合feign" class="header-anchor">#</a> Spring Cloud Alibaba快速整合Feign</h3> <p><strong>1）引入依赖</strong></p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!-- openfeign 远程调用 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-openfeign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>    
+</code></pre></div><p><strong>2）编写调用接口+@FeignClient注解</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;mall-order&quot;</span><span class="token punctuation">,</span>path <span class="token operator">=</span> <span class="token string">&quot;/order&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">OrderFeignService</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/findOrderByUserId/{userId}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">R</span> <span class="token function">findOrderByUserId</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;userId&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>3）调用端在启动类上添加@EnableFeignClients注解</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token annotation punctuation">@EnableFeignClients</span>  <span class="token comment">//扫描和注册feign客户端的beanDefinition</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MallUserFeignDemoApplication</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">MallUserFeignDemoApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>  
+</code></pre></div><p><strong>4）发起调用，像调用本地方式一样调用远程服务</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">OrderFeignService</span> orderFeignService<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/findOrderByUserId/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">R</span>  <span class="token function">findOrderByUserId</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//feign调用</span>
+        <span class="token class-name">R</span> result <span class="token operator">=</span> orderFeignService<span class="token punctuation">.</span><span class="token function">findOrderByUserId</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>        
+</code></pre></div><p>提示： Feign 的继承特性可以让服务的接口定义单独抽出来，作为公共的依赖，以方便使用。</p> <h3 id="spring-cloud-feign扩展"><a href="#spring-cloud-feign扩展" class="header-anchor">#</a> Spring Cloud Feign扩展</h3> <p>Feign 提供了很多的扩展机制，让用户可以更加灵活的使用。</p> <h4 id="日志配置"><a href="#日志配置" class="header-anchor">#</a> <strong>日志配置</strong></h4> <p>有时候我们遇到 Bug，比如接口调用失败、参数没收到等问题，或者想看看调用性能，就需要配置 Feign 的日志了，以此让 Feign 把请求信息输出来。</p> <p><strong>1）定义一个配置类，指定日志级别</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 注意： 此处配置@Configuration注解就会全局生效，如果想指定对应微服务生效，就不能配置@Configuration</span>
+<span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FeignConfig</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 日志级别
+     *
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span> <span class="token function">feignLoggerLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span><span class="token punctuation">.</span><span class="token constant">FULL</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>     
+</code></pre></div><p>通过源码可以看到日志等级有 4 种，分别是：</p> <ul><li><strong>NONE</strong>【性能最佳，适用于生产】：不记录任何日志（默认值）。</li> <li><strong>BASIC</strong>【适用于生产环境追踪问题】：仅记录请求方法、URL、响应状态代码以及执行时间。</li> <li><strong>HEADERS</strong>：记录BASIC级别的基础上，记录请求和响应的header。</li> <li><strong>FULL</strong>【比较适用于开发及测试环境定位问题】：记录请求和响应的header、body和元数据。</li></ul> <p><strong>2) 局部配置，让调用的微服务生效，在@FeignClient注解中指定使用的配置类</strong></p> <p><img src="https://img.jssjqd.cn/202304111620862.png" alt="image-20230411162020817"></p> <p><strong>3) 在yml配置文件中配置 Client 的日志级别才能正常输出日志，格式是&quot;logging.level.feign接口包路径=debug&quot;</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">logging</span><span class="token punctuation">:</span>
+  <span class="token key atrule">level</span><span class="token punctuation">:</span>
+    <span class="token key atrule">com.tuling.mall.feigndemo.feign</span><span class="token punctuation">:</span> debug
+</code></pre></div><p>测试：BASIC级别日志</p> <p><img src="https://img.jssjqd.cn/202304111633260.png" alt="image-20230411163303334"></p> <p><strong>补充：局部配置可以在yml中配置</strong></p> <p>对应属性配置类： org.springframework.cloud.openfeign.FeignClientProperties.FeignClientConfiguration</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mall-order</span><span class="token punctuation">:</span>  <span class="token comment">#对应微服务</span>
+        <span class="token key atrule">loggerLevel</span><span class="token punctuation">:</span> FULL
+</code></pre></div><h4 id="契约配置"><a href="#契约配置" class="header-anchor">#</a> <strong>契约配置</strong></h4> <p>Spring Cloud 在 Feign 的基础上做了扩展，可以让 Feign 支持 Spring MVC 的注解来调用。原生的 Feign 是不支持 Spring MVC 注解的，如果你想在 Spring Cloud 中使用原生的注解方式来定义客户端也是可以的，通过配置契约来改变这个配置，Spring Cloud 中默认的是 SpringMvcContract。</p> <p><strong>1）修改契约配置，支持Feign原生的注解</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 修改契约配置，支持Feign原生的注解
+ * @return
+ */</span>
+<span class="token annotation punctuation">@Bean</span>
+<span class="token keyword">public</span> <span class="token class-name">Contract</span> <span class="token function">feignContract</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Contract<span class="token punctuation">.</span>Default</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意：修改契约配置后，OrderFeignService 不再支持springmvc的注解，需要使用Feign原生的注解</p> <p><strong>2）OrderFeignService 中配置使用Feign原生的注解</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;mall-order&quot;</span><span class="token punctuation">,</span>path <span class="token operator">=</span> <span class="token string">&quot;/order&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">OrderFeignService</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestLine</span><span class="token punctuation">(</span><span class="token string">&quot;GET /findOrderByUserId/{userId}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">R</span> <span class="token function">findOrderByUserId</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Param</span><span class="token punctuation">(</span><span class="token string">&quot;userId&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>3）补充，也可以通过yml配置契约</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mall-order</span><span class="token punctuation">:</span>  <span class="token comment">#对应微服务</span>
+        <span class="token key atrule">loggerLevel</span><span class="token punctuation">:</span> FULL
+        <span class="token key atrule">contract</span><span class="token punctuation">:</span> feign.Contract.Default   <span class="token comment">#指定Feign原生注解契约配置</span>
+</code></pre></div><h4 id="通过拦截器实现参数传递"><a href="#通过拦截器实现参数传递" class="header-anchor">#</a> <strong>通过拦截器实现参数传递</strong></h4> <p>通常我们调用的接口都是有权限控制的，很多时候可能认证的值是通过参数去传递的，还有就是通过请求头去传递认证信息，比如 Basic 认证方式。</p> <p><strong>Feign 中我们可以直接配置 Basic 认证</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>  <span class="token comment">// 全局配置</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FeignConfig</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">BasicAuthRequestInterceptor</span> <span class="token function">basicAuthRequestInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BasicAuthRequestInterceptor</span><span class="token punctuation">(</span><span class="token string">&quot;fox&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>扩展点： feign.RequestInterceptor</strong></p> <p>每次 feign 发起http调用之前，会去执行拦截器中的逻辑。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">RequestInterceptor</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">/**
+   * Called for every request. Add data using methods on the supplied {@link RequestTemplate}.
+   */</span>
+  <span class="token keyword">void</span> <span class="token function">apply</span><span class="token punctuation">(</span><span class="token class-name">RequestTemplate</span> template<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>使用场景</p> <ol><li>统一添加 header 信息；</li> <li>对 body 中的信息做修改或替换；</li></ol> <p><strong>自定义拦截器实现认证逻辑</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FeignAuthRequestInterceptor</span> <span class="token keyword">implements</span> <span class="token class-name">RequestInterceptor</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">apply</span><span class="token punctuation">(</span><span class="token class-name">RequestTemplate</span> template<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 业务逻辑</span>
+        <span class="token class-name">String</span> access_token <span class="token operator">=</span> <span class="token constant">UUID</span><span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        template<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">&quot;Authorization&quot;</span><span class="token punctuation">,</span>access_token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Configuration</span>  <span class="token comment">// 全局配置</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FeignConfig</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span> <span class="token function">feignLoggerLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span><span class="token punctuation">.</span><span class="token constant">FULL</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/**
+     * 自定义拦截器
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">FeignAuthRequestInterceptor</span> <span class="token function">feignAuthRequestInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">FeignAuthRequestInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>      
+</code></pre></div><p>测试</p> <p><img src="https://img.jssjqd.cn/202304111623332.png" alt="image-20230411162327227"></p> <p><strong>补充：可以在yml中配置</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mall-order</span><span class="token punctuation">:</span>  <span class="token comment">#对应微服务</span>
+        requestInterceptors<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>  <span class="token comment">#配置拦截器</span>
+          com.tuling.mall.feigndemo.interceptor.FeignAuthRequestInterceptor
+</code></pre></div><p>mall-order端可以通过 @RequestHeader获取请求参数，建议在filter,interceptor中处理</p> <h4 id="超时时间配置"><a href="#超时时间配置" class="header-anchor">#</a> 超时时间配置</h4> <p>通过 Options 可以配置连接超时时间和读取超时时间，Options 的第一个参数是连接的超时时间（ms），默认值是 2s；第二个是请求处理的超时时间（ms），默认值是 5s。</p> <p><strong>全局配置</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FeignConfig</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">Request<span class="token punctuation">.</span>Options</span> <span class="token function">options</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Request<span class="token punctuation">.</span>Options</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>   
+</code></pre></div><p><strong>yml中配置</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mall-order</span><span class="token punctuation">:</span>  <span class="token comment">#对应微服务</span>
+        <span class="token comment"># 连接超时时间，默认2s</span>
+        <span class="token key atrule">connectTimeout</span><span class="token punctuation">:</span> <span class="token number">5000</span>
+        <span class="token comment"># 请求处理超时时间，默认5s</span>
+        <span class="token key atrule">readTimeout</span><span class="token punctuation">:</span> <span class="token number">10000</span>
+</code></pre></div><p>补充说明： Feign的底层用的是Ribbon，但超时时间以Feign配置为准</p> <p>测试超时情况：</p> <p><img src="https://img.jssjqd.cn/202304111624722.png" alt="image-20230411162428871"></p> <p>返回结果</p> <p>​    <img src="https://img.jssjqd.cn/202304111624633.png" alt="image-20230411162438719"></p> <h4 id="客户端组件配置"><a href="#客户端组件配置" class="header-anchor">#</a> <strong>客户端组件配置</strong></h4> <p>Feign 中默认使用 JDK 原生的 URLConnection 发送 HTTP 请求，我们可以集成别的组件来替换掉 URLConnection，比如 Apache HttpClient，OkHttp。</p> <p>Feign发起调用真正执行逻辑：<strong>feign.Client#execute（扩展点）</strong></p> <p>​    <img src="https://img.jssjqd.cn/202304111625884.png" alt="image-20230411162506698"></p> <p><strong>配置Apache HttpClient</strong></p> <p>引入依赖</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token class-name">Apache</span> <span class="token class-name">HttpClient</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>httpcomponents<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>httpclient<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">4.5</span><span class="token number">.7</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>io<span class="token punctuation">.</span>github<span class="token punctuation">.</span>openfeign<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>feign<span class="token operator">-</span>httpclient<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">10.1</span><span class="token number">.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>  
+</code></pre></div><p><strong>然后修改yml配置，将 Feign 的Apache HttpClient启用</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token comment">#feign 使用 Apache HttpClient  可以忽略，默认开启</span>
+  <span class="token key atrule">httpclient</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><p>关于配置可参考源码： org.springframework.cloud.openfeign.FeignAutoConfiguration</p> <p><img src="https://img.jssjqd.cn/202304111626505.png" alt="image-20230411162605483"></p> <p>测试：调用会进入feign.httpclient.ApacheHttpClient#execute</p> <p><strong>配置 OkHttp</strong></p> <p>引入依赖</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.github.openfeign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>feign-okhttp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>然后修改yml配置，将 Feign 的 HttpClient 禁用，启用 OkHttp，配置如下：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token comment">#feign 使用 okhttp</span>
+  <span class="token key atrule">httpclient</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">okhttp</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><p>关于配置可参考源码： org.springframework.cloud.openfeign.FeignAutoConfiguration</p> <p><img src="https://img.jssjqd.cn/202304111626190.png" alt="image-20230411162642422"></p> <p>测试：调用会进入feign.okhttp.OkHttpClient#execute</p> <h4 id="gzip-压缩配置"><a href="#gzip-压缩配置" class="header-anchor">#</a> GZIP 压缩配置</h4> <p>开启压缩可以有效节约网络资源，提升接口性能，我们可以配置 GZIP 来压缩数据：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token comment"># 配置 GZIP 来压缩数据</span>
+  <span class="token key atrule">compression</span><span class="token punctuation">:</span>
+    <span class="token key atrule">request</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token comment"># 配置压缩的类型</span>
+      <span class="token key atrule">mime-types</span><span class="token punctuation">:</span> text/xml<span class="token punctuation">,</span>application/xml<span class="token punctuation">,</span>application/json
+      <span class="token comment"># 最小压缩值</span>
+      <span class="token key atrule">min-request-size</span><span class="token punctuation">:</span> <span class="token number">2048</span>
+    <span class="token key atrule">response</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><p>注意：只有当 Feign 的 Http Client 不是 okhttp3 的时候，压缩才会生效，配置源码在FeignAcceptGzipEncodingAutoConfiguration</p> <p><img src="https://img.jssjqd.cn/202304111627154.png" alt="image-20230411162712842"></p> <p>核心代码就是 @ConditionalOnMissingBean（type=&quot;okhttp3.OkHttpClient&quot;），表示 Spring BeanFactory 中不包含指定的 bean 时条件匹配，也就是没有启用 okhttp3 时才会进行压缩配置。</p> <h4 id="编码器解码器配置"><a href="#编码器解码器配置" class="header-anchor">#</a> 编码器解码器配置</h4> <p>Feign 中提供了自定义的编码解码器设置，同时也提供了多种编码器的实现，比如 Gson、Jaxb、Jackson。我们可以用不同的编码解码器来处理数据的传输。如果你想传输 XML 格式的数据，可以自定义 XML 编码解码器来实现获取使用官方提供的 Jaxb。</p> <p>扩展点：Encoder &amp; Decoder</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Encoder</span> <span class="token punctuation">{</span>
+    <span class="token keyword">void</span> <span class="token function">encode</span><span class="token punctuation">(</span><span class="token class-name">Object</span> object<span class="token punctuation">,</span> <span class="token class-name">Type</span> bodyType<span class="token punctuation">,</span> <span class="token class-name">RequestTemplate</span> template<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">EncodeException</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Decoder</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Object</span> <span class="token function">decode</span><span class="token punctuation">(</span><span class="token class-name">Response</span> response<span class="token punctuation">,</span> <span class="token class-name">Type</span> type<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">,</span> <span class="token class-name">DecodeException</span><span class="token punctuation">,</span> <span class="token class-name">FeignException</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>   
+</code></pre></div><p><strong>Java配置方式</strong></p> <p>配置编码解码器只需要在 Feign 的配置类中注册 Decoder 和 Encoder 这两个类即可:</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Bean</span>
+<span class="token keyword">public</span> <span class="token class-name">Decoder</span> <span class="token function">decoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">JacksonDecoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token annotation punctuation">@Bean</span>
+<span class="token keyword">public</span> <span class="token class-name">Encoder</span> <span class="token function">encoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">JacksonEncoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>yml配置方式</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mall-order</span><span class="token punctuation">:</span>  <span class="token comment">#对应微服务</span>
+        <span class="token comment"># 配置编解码器</span>
+        <span class="token key atrule">encoder</span><span class="token punctuation">:</span> feign.jackson.JacksonEncoder
+        <span class="token key atrule">decoder</span><span class="token punctuation">:</span> feign.jackson.JacksonDecoder
+</code></pre></div><h2 id="spring-cloud整合dubbo"><a href="#spring-cloud整合dubbo" class="header-anchor">#</a> Spring Cloud整合Dubbo</h2> <h3 id="provider端配置"><a href="#provider端配置" class="header-anchor">#</a> provider端配置</h3> <p><strong>1）引入依赖</strong></p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-dubbo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.2.7.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-alibaba-nacos-discovery<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>注意：因为spring cloud alibaba 2.2.8这个版本没有整合dubbo，所以需要指定dubbo的版本</p> <p><img src="https://img.jssjqd.cn/202304111629724.png" alt="image-20230411162906522"></p> <p><strong>2）修改application.yml</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">dubbo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">scan</span><span class="token punctuation">:</span>
+    <span class="token comment"># 指定 Dubbo 服务实现类的扫描基准包</span>
+    <span class="token key atrule">base-packages</span><span class="token punctuation">:</span> com.tuling.mall.user.service
+<span class="token comment">#  application:</span>
+<span class="token comment">#    name: ${spring.application.name}</span>
+  <span class="token key atrule">protocol</span><span class="token punctuation">:</span>
+    <span class="token comment"># dubbo 协议</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> dubbo
+    <span class="token comment"># dubbo 协议端口（ -1 表示自增端口，从 20880 开始）</span>
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+<span class="token comment">#  registry:</span>
+<span class="token comment">#    #挂载到 Spring Cloud 注册中心  高版本可选</span>
+<span class="token comment">#    address: spring-cloud://127.0.0.1:8848</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>cloud<span class="token punctuation">-</span>dubbo<span class="token punctuation">-</span>provider<span class="token punctuation">-</span>user
+  <span class="token key atrule">main</span><span class="token punctuation">:</span>
+    <span class="token comment"># Spring Boot2.1及更高的版本需要设定</span>
+    <span class="token key atrule">allow-bean-definition-overriding</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">nacos</span><span class="token punctuation">:</span>
+      <span class="token comment"># Nacos 服务发现与注册配置</span>
+      <span class="token key atrule">discovery</span><span class="token punctuation">:</span>
+        <span class="token key atrule">server-addr</span><span class="token punctuation">:</span> 127.0.0.1<span class="token punctuation">:</span><span class="token number">8848</span>
+</code></pre></div><p><strong>3）服务实现类上配置@DubboService暴露服务</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@DubboService</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">UserService</span> <span class="token punctuation">{</span>
+
+   <span class="token annotation punctuation">@Autowired</span>
+   <span class="token keyword">private</span> <span class="token class-name">UserMapper</span> userMapper<span class="token punctuation">;</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getById</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">getById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>  
+</code></pre></div><h3 id="consumer端配置"><a href="#consumer端配置" class="header-anchor">#</a> consumer端配置</h3> <p><strong>1）引入依赖</strong></p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-dubbo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.2.7.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-alibaba-nacos-discovery<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>   
+</code></pre></div><p><strong>2）修改application.yml</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">dubbo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token comment"># 指定需要订阅的服务提供方，默认值*，会订阅所有服务，不建议使用</span>
+    <span class="token key atrule">subscribed-services</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>cloud<span class="token punctuation">-</span>dubbo<span class="token punctuation">-</span>provider<span class="token punctuation">-</span>user
+<span class="token comment">#  application:</span>
+<span class="token comment">#    name: ${spring.application.name}</span>
+  <span class="token key atrule">protocol</span><span class="token punctuation">:</span>
+    <span class="token comment"># dubbo 协议</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> dubbo
+    <span class="token comment"># dubbo 协议端口（ -1 表示自增端口，从 20880 开始）</span>
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">-1</span>
+<span class="token comment">#  registry:</span>
+<span class="token comment">#    #挂载到 Spring Cloud 注册中心  高版本可选</span>
+<span class="token comment">#    address: spring-cloud://127.0.0.1:8848</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>cloud<span class="token punctuation">-</span>dubbo<span class="token punctuation">-</span>consumer<span class="token punctuation">-</span>user
+  <span class="token key atrule">main</span><span class="token punctuation">:</span>
+    <span class="token comment"># Spring Boot2.1及更高的版本需要设定</span>
+    <span class="token key atrule">allow-bean-definition-overriding</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">nacos</span><span class="token punctuation">:</span>
+      <span class="token comment"># Nacos 服务发现与注册配置</span>
+      <span class="token key atrule">discovery</span><span class="token punctuation">:</span>
+        <span class="token key atrule">server-addr</span><span class="token punctuation">:</span> 127.0.0.1<span class="token punctuation">:</span><span class="token number">8848</span>
+</code></pre></div><p>当应用使用属性dubbo.cloud.subscribed-services为默认值时，日志中将会输出警告：</p> <p><img src="https://img.jssjqd.cn/202304111630772.png" alt="image-20230411163040817"></p> <p><strong>3）服务消费方通过@DubboReference引入服务</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserConstroller</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@DubboReference</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserService</span> userService<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/info/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> userService<span class="token punctuation">.</span><span class="token function">getById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/list&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> userService<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="从open-feign迁移到dubbo"><a href="#从open-feign迁移到dubbo" class="header-anchor">#</a> 从Open Feign迁移到Dubbo</h3> <p>Dubbo Spring Cloud 提供了方案，可以从Open Feign迁移到Dubbo，即 @DubboTransporte 注解。能够帮助服务消费端的 Spring Cloud Open Feign 接口以及 @LoadBalanced RestTemplate Bean 底层走 Dubbo 调用（可切换 Dubbo 支持的协议），而服务提供方则只需在原有 @RestController 类上追加 Dubbo @Servce 注解（需要抽取接口）即可，换言之，在不调整 Feign 接口以及 RestTemplate URL 的前提下，实现无缝迁移。</p> <p><strong>1）修改服务提供者</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@DubboService</span>
+<span class="token annotation punctuation">@Slf4j</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">UserService</span> <span class="token punctuation">{</span>
+
+   <span class="token annotation punctuation">@Autowired</span>
+   <span class="token keyword">private</span> <span class="token class-name">UserMapper</span> userMapper<span class="token punctuation">;</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/list&quot;</span><span class="token punctuation">)</span>
+   <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;查询user列表&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/getById/{id}&quot;</span><span class="token punctuation">)</span>
+   <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getById</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">getById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>2）服务消费端引入依赖</strong></p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-dubbo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.2.7.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-alibaba-nacos-discovery<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-openfeign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><strong>3）添加Feign的实现，启动类上添加@EnableFeignClients</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token annotation punctuation">@EnableFeignClients</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringCloudDubboConsumerUserFeignApplication</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">SpringCloudDubboConsumerUserFeignApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>4）Feign接口添加</strong> <strong>@DubboTransported</strong> <strong>注解</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;spring-cloud-dubbo-provider-user-feign&quot;</span><span class="token punctuation">,</span>path <span class="token operator">=</span> <span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@DubboTransported</span><span class="token punctuation">(</span>protocol <span class="token operator">=</span> <span class="token string">&quot;dubbo&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserDubboFeignService</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/list&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/getById/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getById</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;spring-cloud-dubbo-provider-user-feign&quot;</span><span class="token punctuation">,</span>path <span class="token operator">=</span> <span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserFeignService</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/list&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/getById/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getById</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>     
+</code></pre></div><p><strong>5）调用对象添加</strong> <strong>@DubboTransported</strong> <strong>注解，发起调用</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserConstroller</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@DubboReference</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserService</span> userService<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/info/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userService<span class="token punctuation">.</span><span class="token function">getById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserFeignService</span> userFeignService<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/list&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userFeignService<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserDubboFeignService</span> userDubboFeignService<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/list2&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">list2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> userDubboFeignService<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>​</p></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/04/13, 09:55:08</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/ed68ae/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">负载均衡Ribbon&amp;LoadBalancer实战</div></a> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/ed68ae/" class="prev">负载均衡Ribbon&amp;LoadBalancer实战</a></span> <!----></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/2491fa/"><div>
+            Nacos配置中心
+            <!----></div></a> <span class="date">04-13</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/d20586/"><div>
+            容器访问宿主机ip
+            <!----></div></a> <span class="date">04-10</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/ed68ae/"><div>
+            负载均衡Ribbon&amp;LoadBalancer实战
+            <!----></div></a> <span class="date">04-08</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2023
+    <span>| <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18050343号-2</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e232df78.js" defer></script><script src="/assets/js/2.712f36ff.js" defer></script><script src="/assets/js/92.8164d2fd.js" defer></script>
+  </body>
+</html>
