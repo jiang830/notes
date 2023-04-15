@@ -1,11 +1,8 @@
-# npm
-package-lock.json
-node_modules
-
-# yarn
-yarn.lock
-
-# vscode
-.vscode
-
-/public/
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
