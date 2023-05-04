@@ -7,8 +7,7 @@ categories:
 tags: 
   - null
 author: 
-  name: xugaoyi
-  link: https://github.com/xugaoyi
+  name: 江
 ---
 RabbitMQ 实现消费端异常处理
 ------------------

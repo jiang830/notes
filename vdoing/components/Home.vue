@@ -343,7 +343,7 @@ export default {
 .home-wrapper
   .banner
     width 100%
-    min-height 450px
+    min-height 0px
     margin-top $navbarHeight
     color $bannerTextColor
     position relative

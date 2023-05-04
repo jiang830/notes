@@ -7,8 +7,7 @@ categories:
 tags: 
   - null
 author: 
-  name: xugaoyi
-  link: https://github.com/xugaoyi
+  name: 江
 ---
 前面两节课，我们大概了解了Spring中的一些概念和底层工作流程，本节课开始将真正讲一些Spring中的概念和工作流程。
 ​

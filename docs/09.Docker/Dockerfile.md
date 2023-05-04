@@ -7,8 +7,7 @@ categories:
 tags: 
   - null
 author: 
-  name: xugaoyi
-  link: https://github.com/xugaoyi
+  name: 江
 ---
 <p data-nodeid="1577" class="">在介绍 Dockerfile 最佳实践前，这里再强调一下，<strong data-nodeid="1719">生产实践中一定优先使用 Dockerfile 的方式构建镜像。</strong> 因为使用 Dockerfile 构建镜像可以带来很多好处：</p>
 <ul data-nodeid="1578">
