@@ -6,7 +6,7 @@
 title: 学习笔记
 description: ''
 keywords:
-author: 江
+author:
 language: zh-CN
 timezone: ''
 
@@ -125,7 +125,7 @@ highlight_height_limit: false # unit: px
 code_word_wrap: false
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/favicon.ico
 
 # Avatar (頭像)
 avatar:
@@ -140,7 +140,7 @@ index_site_info_top:
 index_top_img_height: 400px
 
 # Disable all banner image
-disable_top_img: false
+disable_top_img: true
 
 # The banner image of home page
 index_img: transparent
@@ -179,46 +179,46 @@ cover:
   position: right
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-      -  https://img.jssjqd.cn/202304160227920.jpg
-      -  https://img.jssjqd.cn/202304160227922.jpg
-      -  https://img.jssjqd.cn/202304160227923.jpg
-      -  https://img.jssjqd.cn/202304160227924.jpg
-      -  https://img.jssjqd.cn/202304160227925.jpg
-      -  https://img.jssjqd.cn/202304160227926.jpg
-      -  https://img.jssjqd.cn/202304160227927.jpg
-      -  https://img.jssjqd.cn/202304160227928.jpg
-      -  https://img.jssjqd.cn/202304160227929.jpg
-      -  https://img.jssjqd.cn/202304160227930.jpg
-      -  https://img.jssjqd.cn/202304160227931.jpg
-      -  https://img.jssjqd.cn/202304160227932.jpg
-      -  https://img.jssjqd.cn/202304160227933.jpg
-      -  https://img.jssjqd.cn/202304160227934.jpg
-      -  https://img.jssjqd.cn/202304160227935.jpg
-      -  https://img.jssjqd.cn/202304160227936.jpg
-      -  https://img.jssjqd.cn/202304160227937.jpg
-      -  https://img.jssjqd.cn/202304160227938.jpg
-      -  https://img.jssjqd.cn/202304160227939.jpg
-      -  https://img.jssjqd.cn/202304160227940.jpg
-      -  https://img.jssjqd.cn/202304160227942.jpg
-      -  https://img.jssjqd.cn/202304160227943.jpg
-      -  https://img.jssjqd.cn/202304160227944.jpg
-      -  https://img.jssjqd.cn/202304160227945.jpg
-      -  https://img.jssjqd.cn/202304160227946.jpg
-      -  https://img.jssjqd.cn/202304160227947.jpg
-      -  https://img.jssjqd.cn/202304160227948.jpg
-      -  https://img.jssjqd.cn/202304160227949.jpg
-      -  https://img.jssjqd.cn/202304160227950.jpg
-      -  https://img.jssjqd.cn/202304160227951.jpg
-      -  https://img.jssjqd.cn/202304160227952.jpg
-      -  https://img.jssjqd.cn/202304160227953.jpg
-      -  https://img.jssjqd.cn/202304160227954.jpg
-      -  https://img.jssjqd.cn/202304160227955.jpg
-      -  https://img.jssjqd.cn/202304160227956.jpg
-      -  https://img.jssjqd.cn/202304160227957.jpg
-      -  https://img.jssjqd.cn/202304160227958.jpg
-      -  https://img.jssjqd.cn/202304160227959.jpg
-      -  https://img.jssjqd.cn/202304160227960.jpg
-      -  https://img.jssjqd.cn/202304160227961.jpg
+#      -  https://img.jssjqd.cn/202304160227920.jpg
+#      -  https://img.jssjqd.cn/202304160227922.jpg
+#      -  https://img.jssjqd.cn/202304160227923.jpg
+#      -  https://img.jssjqd.cn/202304160227924.jpg
+#      -  https://img.jssjqd.cn/202304160227925.jpg
+#      -  https://img.jssjqd.cn/202304160227926.jpg
+#      -  https://img.jssjqd.cn/202304160227927.jpg
+#      -  https://img.jssjqd.cn/202304160227928.jpg
+#      -  https://img.jssjqd.cn/202304160227929.jpg
+#      -  https://img.jssjqd.cn/202304160227930.jpg
+#      -  https://img.jssjqd.cn/202304160227931.jpg
+#      -  https://img.jssjqd.cn/202304160227932.jpg
+#      -  https://img.jssjqd.cn/202304160227933.jpg
+#      -  https://img.jssjqd.cn/202304160227934.jpg
+#      -  https://img.jssjqd.cn/202304160227935.jpg
+#      -  https://img.jssjqd.cn/202304160227936.jpg
+#      -  https://img.jssjqd.cn/202304160227937.jpg
+#      -  https://img.jssjqd.cn/202304160227938.jpg
+#      -  https://img.jssjqd.cn/202304160227939.jpg
+#      -  https://img.jssjqd.cn/202304160227940.jpg
+#      -  https://img.jssjqd.cn/202304160227942.jpg
+#      -  https://img.jssjqd.cn/202304160227943.jpg
+#      -  https://img.jssjqd.cn/202304160227944.jpg
+#      -  https://img.jssjqd.cn/202304160227945.jpg
+#      -  https://img.jssjqd.cn/202304160227946.jpg
+#      -  https://img.jssjqd.cn/202304160227947.jpg
+#      -  https://img.jssjqd.cn/202304160227948.jpg
+#      -  https://img.jssjqd.cn/202304160227949.jpg
+#      -  https://img.jssjqd.cn/202304160227950.jpg
+#      -  https://img.jssjqd.cn/202304160227951.jpg
+#      -  https://img.jssjqd.cn/202304160227952.jpg
+#      -  https://img.jssjqd.cn/202304160227953.jpg
+#      -  https://img.jssjqd.cn/202304160227954.jpg
+#      -  https://img.jssjqd.cn/202304160227955.jpg
+#      -  https://img.jssjqd.cn/202304160227956.jpg
+#      -  https://img.jssjqd.cn/202304160227957.jpg
+#      -  https://img.jssjqd.cn/202304160227958.jpg
+#      -  https://img.jssjqd.cn/202304160227959.jpg
+#      -  https://img.jssjqd.cn/202304160227960.jpg
+#      -  https://img.jssjqd.cn/202304160227961.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:

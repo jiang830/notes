@@ -5,19 +5,136 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update butterfly">
-      <change afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/tags/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_config.anzhiyu.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_config.aurora.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/butterfly/source/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.butterfly.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.butterfly.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/02.Nacos配置中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/02.Nacos配置中心.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/00.ElasticSearch快速入门实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/00.ElasticSearch快速入门实战.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/10.ElasticSearch 高级查询语法Query DSL实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/10.ElasticSearch 高级查询语法Query DSL实战.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/css/_layout/aside.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/css/_layout/aside.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.Spring/00.Spring底层核心原理解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.Spring/02.手写Spring.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.Spring/03-Spring之底层架构核心概念解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/代理模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/单例模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/工厂模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/建造模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/模版方法模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/策略模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/装饰者模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/观察者模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/00.设计模式/适配器模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/01.MySQL索引数据结构详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/02.Explain详解与索引最佳实践.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/03.SQL是如何执行的.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/04.MySQL索引优化上.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/05.MySQL索引优化下.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/06.MySQL事务隔离级别与锁机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/07.MVCC与BufferPool缓存机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/08.Innodb BufferPool缓存机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/01.MySQL/10.MySQL问题回顾.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/01.JVM类加载机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/02.JVM内存模型深度剖析与优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/03.JVM对象创建与内存分配机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/04.Class文件结构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/05.垃圾收集器ParNew&amp;CMS与底层三色标记算法详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/06.垃圾收集器G1&amp;ZGC详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/07.JVM调优工具详解及调优实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/02.JVM性能调优/10.JVM调优实战及常量池详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/00.并发编程之深入理解JMM&amp;并发三大特性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/01.CPU缓存架构&amp;缓存一致性协议详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/10.并发List、Set和ConcurrentHashMap底层原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/100.ForkJoin工作原理分析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/11.JDK 1.7 HashMap在并发情况下的死循环问题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/20.Java并发线程池底层原理与源码详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/30.深入理解Java线程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/31.进程间的通信方式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/32.LockSupport#park&amp;unpark应用及其源码分析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/40.深入理解CAS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/41.并发工具之Atomic原子操作类详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/50.并发锁机制之synchronized.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/60.AQS之独占锁ReentrantLock源码分析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/70.AQS之Semaphore&amp;CountDownLatch&amp;CyclicBarrie详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/80.AQS之ReentrantReadWriteLock详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/03.并发编程/90.阻塞队列BlockingQueue实战及原理分析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/00.Redis安装.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/01.Redis核心数据结构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/02.Redis高性能原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/10.Redis持久化策略.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/100.Redis常见面试题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/11.Redis主从与哨兵架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/12.Redis哨兵机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/20.Redis缓存高可用集群.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/30.Redis缓存高可用集群水平扩展.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/40.Redis高并发分布式锁.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/50.一线大厂高并发缓存架构实战与性能优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/60.Redis缓存设计与性能优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/70.Redis源码以及核心设计原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/04.Redis/80.Redis HyperLogLog底层与GEO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/00.RabbitMQ/00.RabbitMQ上手以及集群机构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/00.RabbitMQ/01.RabbitMQ集群搭建docker版.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/00.RabbitMQ/10.RabbitMQ工作模式剖析以及常用编程模型.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/00.RabbitMQ/20.RabbitMQ高级使用场景.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/00.RabbitMQ/30.RabbitMQ使用中的常见问题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/00.RabbitMQ/RabbitMQ实现消费端异常处理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/01.Kafka/00.Kafka基本原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/01.Kafka/10.Kafka设计原理详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/07.消息队列/02.RocketMQ/01.RocketMQ快速实战以及集群架构解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/09.Docker/00.Docker详解与部署微服务实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/09.Docker/10.Docker Compose项目部署.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/09.Docker/100.idea加密连接服务器docker.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/09.Docker/101.容器访问宿主机ip.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/09.Docker/Dockerfile.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/10.Dubbo/00.手写模拟Dubbo的底层实现原理实现.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/10.Dubbo/10.Dubbo3.0入门教程与新特性介绍.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/10.Dubbo/20.Dubbo 3.0服务注册与引入底层原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/10.Dubbo/30.Dubbo3中的服务调用底层原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/11.面试/网络总结.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/11.面试/集合框架.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/11.面试/面试.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/11.面试/面试题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/00.SpringBoot原理/00.手写模拟SpringBoot核心流程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/00.SpringBoot原理/10.SpringBoot自动配置底层源码解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/00.微服务架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/01.Nacos注册中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/02.Nacos配置中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/10.负载均衡Ribbon&amp;LoadBalancer实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/150.微服务安全Spring Security OAuth2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/12.微服务/10.Spring Cloud Alibaba/20.微服务调用组件Feign&amp;Dubbo实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/00.ElasticSearch快速入门实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/01.ElasticSearch基础查询语句.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/10.ElasticSearch 高级查询语法Query DSL实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/20. ElasticSearch搜索技术深入与聚合查询实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/13.ElasticSearch/30.ElasticSearch集群架构实战及其原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/14.Tomcat/00.Tomcat整体架构及其设计精髓.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/14.Tomcat/10.Tomcat线程模型详解&amp;性能调优.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/14.Tomcat/20.Tomcat类加载机制&amp;热加载和热部署实现.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/15.Netty/00.深入理解网络通信和TCP IP协议.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/15.Netty/10.BIO NIO编程与直接内存零拷贝.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/16.网络/计算机网络.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/20.Zookeeper/00.Zookeeper特性与节点数据类型详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/00.需求分析和架构介绍.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/00.项目环境运行.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/10.后台核心功能及多数据源架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/20.前端架构简介以及支撑服务梳理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/30.微服务架构拆分实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/40.分布式ID服务.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/50.微服务网关整合OAuth2.0授权中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/70.订单系统的设计与海量数据处理实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/40.微服务电商平台/80.电商订单接入支付宝流程实战优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/00.电商项目整体架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/01.电商项目环境配置.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/10.秒杀系统-商品详情多级缓存优化-1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/11.秒杀系统-商品详情多级缓存优化-2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/12.秒杀系统-商品详情多级缓存优化-3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/20.微服务架构拆分及授权中心实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/50.项目实战/30.高性能网关服务及授权中心对接.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Linux/linux 网络虚拟化：network namespace.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/算法/排序算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/算法/排序算法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/anzhiyu/source/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/themes/anzhiyu/source/img/favicon.ico" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +142,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="vuepress" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -50,7 +172,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "hexo",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/project/notes",
+    "last_opened_file_path": "D:/project/notes/themes/anzhiyu/source/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +184,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\notes\themes\anzhiyu\source\img" />
+      <recent name="D:\project\notes" />
+      <recent name="D:\project\notes\themes\butterfly\source\img" />
       <recent name="E:\project\notes\themes\butterfly\source\img" />
       <recent name="E:\project\notes\public\img" />
     </key>
@@ -78,6 +203,10 @@
       <workItem from="1681589415985" duration="833000" />
       <workItem from="1681635876586" duration="7885000" />
       <workItem from="1683154286601" duration="2315000" />
+      <workItem from="1683262638979" duration="2613000" />
+      <workItem from="1683308797854" duration="1713000" />
+      <workItem from="1683384358557" duration="4154000" />
+      <workItem from="1684805232752" duration="2864000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>

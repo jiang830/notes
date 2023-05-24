@@ -9,7 +9,7 @@ title: 学习笔记
 subtitle: ''
 description: ''
 keywords:
-author: 江
+author:
 language: zh-CN
 timezone: ''
 
@@ -99,7 +99,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: anzhiyu
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
