@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="" />
+    <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/mian.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/20.性能调优/00.MySQL/20.关系型数据库层面的高并发优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/20.性能调优/00.MySQL/Sharding-JDBC分库分表应用实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/20.性能调优/03.分库分表/10.ShardingJDBC分库分表实战指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/20.性能调优/03.分库分表/10.ShardingJDBC分库分表实战指南.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/40.分布式存储/00.站在全局视角理解系统高并发.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/butterfly" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hexo" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -24,27 +36,47 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2OTc6kDS815uYAJTaawulQ98Gq4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Java/config/.gradle",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;vuepress-theme-hope&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/project/notes/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Program files\\JetBrains\\IntelliJ IDEA 2023.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\notes\src" />
+      <recent name="D:\project\notes\themes\anzhiyu\source\img" />
+      <recent name="D:\project\notes" />
+      <recent name="D:\project\notes\themes\butterfly\source\img" />
+      <recent name="E:\project\notes\themes\butterfly\source\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\notes\docs" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,10 +86,99 @@
       <option name="presentableId" value="Default" />
       <updated>1681587839788</updated>
       <workItem from="1681587841531" duration="1372000" />
+      <workItem from="1681589415985" duration="833000" />
+      <workItem from="1681635876586" duration="7885000" />
+      <workItem from="1683154286601" duration="2315000" />
+      <workItem from="1683262638979" duration="2613000" />
+      <workItem from="1683308797854" duration="1713000" />
+      <workItem from="1683384358557" duration="4154000" />
+      <workItem from="1684805232752" duration="2864000" />
+      <workItem from="1684916018745" duration="277000" />
+      <workItem from="1684916304685" duration="852000" />
+      <workItem from="1684917194527" duration="238000" />
+      <workItem from="1684917445125" duration="939000" />
+      <workItem from="1684918409068" duration="55000" />
+      <workItem from="1684918555575" duration="378000" />
+      <workItem from="1684918944863" duration="5094000" />
+      <workItem from="1684927531374" duration="2556000" />
+      <workItem from="1685201274326" duration="519000" />
+      <workItem from="1685474996091" duration="8000" />
+      <workItem from="1690913112280" duration="440000" />
+      <workItem from="1690913639527" duration="267000" />
+      <workItem from="1690913967880" duration="152000" />
+      <workItem from="1690914127517" duration="19000" />
+      <workItem from="1690914152749" duration="3199000" />
+      <workItem from="1690922489025" duration="502000" />
     </task>
+    <task id="LOCAL-00001" summary="update butterfly">
+      <created>1681589719428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681589719428</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1684916191721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684916191721</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1684927677529</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684927677529</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修复md文件内容导致的构建错误">
+      <created>1684929490609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684929490609</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <option name="closed" value="true" />
+      <created>1690914291767</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690914291767</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update butterfly" />
+    <MESSAGE value="修复md文件内容导致的构建错误" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
