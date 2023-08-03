@@ -1,6 +1,12 @@
 ---
 title: Seata事务模式
-date: 2023-5-10 4:11:17
+date: 2023-8-3 5:16:15
+permalink: /pages/202308030516/
+categories: 
+  - 微服务
+  - seata
+author: 
+  name: 江
 ---
 
 ## Seata AT模式
