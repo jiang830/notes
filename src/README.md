@@ -1,5 +1,5 @@
 ---
-home: false
+home: true
 layout: BlogHome
 icon: home
 title: 博客主页
