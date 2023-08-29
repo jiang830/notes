@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/00.需求分析和架构介绍.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/00.项目环境运行.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/10.后台核心功能及多数据源架构.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/100.高并发缓存实战.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/20.前端架构简介以及支撑服务梳理.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/30.微服务架构拆分实战.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/40.分布式ID服务.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/50.微服务网关整合OAuth2.0授权中心.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/70.订单系统的设计与海量数据处理实战.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/80.电商订单接入支付宝流程实战优化.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/150.面试/网络总结.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/150.面试/阿里云面试题.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/150.面试/集合框架.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/150.面试/面试.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/150.面试/面试题.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/02.RocketMQ/20.RocketMQ高性能核心原理.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/20.性能调优/03.分库分表/00.MySQL集群架构搭建以及多数据源管理实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/20.性能调优/03.分库分表/00.MySQL集群架构搭建以及多数据源管理实战.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/00.Redis/30.Redis缓存高可用集群水平扩展.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/00.Redis/30.Redis缓存高可用集群水平扩展.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/00.Redis/40.Redis高并发分布式锁.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/00.Redis/40.Redis高并发分布式锁.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/00.Redis/60.Redis缓存设计与性能优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/00.Redis/60.Redis缓存设计与性能优化.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/00.RabbitMQ上手以及集群机构.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/01.RabbitMQ集群搭建docker版.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/10.RabbitMQ工作模式剖析以及常用编程模型.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/10.RabbitMQ工作模式剖析以及常用编程模型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/20.RabbitMQ高级使用场景.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/20.RabbitMQ高级使用场景.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/30.RabbitMQ使用中的常见问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/30.RabbitMQ使用中的常见问题.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/00.RabbitMQ/RabbitMQ实现消费端异常处理.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/02.RocketMQ/01.RocketMQ快速实战以及集群架构解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/02.RocketMQ/01.RocketMQ快速实战以及集群架构解析.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +135,7 @@
       <workItem from="1691232499407" duration="1303000" />
       <workItem from="1692200941682" duration="290000" />
       <workItem from="1692581934338" duration="1188000" />
+      <workItem from="1693330250198" duration="462000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>
@@ -223,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691260101678</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1693330260930</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693330260930</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
