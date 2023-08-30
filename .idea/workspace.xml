@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/00.需求分析和架构介绍.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/00.项目环境运行.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/10.后台核心功能及多数据源架构.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/100.高并发缓存实战.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/20.前端架构简介以及支撑服务梳理.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/30.微服务架构拆分实战.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/40.分布式ID服务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/50.微服务网关整合OAuth2.0授权中心.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/70.订单系统的设计与海量数据处理实战.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/140.微服务电商项目/80.电商订单接入支付宝流程实战优化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/150.面试/网络总结.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/150.面试/阿里云面试题.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/150.面试/集合框架.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/150.面试/面试.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/150.面试/面试题.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/30.分布式框架/05.消息队列/02.RocketMQ/20.RocketMQ高性能核心原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/30.微服务架构拆分实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/30.微服务架构拆分实战.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/50.微服务网关整合OAuth2.0授权中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/50.微服务网关整合OAuth2.0授权中心.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/80.电商订单接入支付宝流程实战优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/80.电商订单接入支付宝流程实战优化.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +122,7 @@
       <workItem from="1692200941682" duration="290000" />
       <workItem from="1692581934338" duration="1188000" />
       <workItem from="1693330250198" duration="462000" />
+      <workItem from="1693407326484" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>
