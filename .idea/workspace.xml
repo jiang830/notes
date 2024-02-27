@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/30.微服务架构拆分实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/30.微服务架构拆分实战.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/50.微服务网关整合OAuth2.0授权中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/50.微服务网关整合OAuth2.0授权中心.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/40.分布式ID服务.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/40.分布式ID服务.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/70.订单系统的设计与海量数据处理实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/70.订单系统的设计与海量数据处理实战.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/140.微服务电商项目/80.电商订单接入支付宝流程实战优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/140.微服务电商项目/80.电商订单接入支付宝流程实战优化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/00.SpringBoot原理/00.手写模拟SpringBoot核心流程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/00.SpringBoot原理/10.SpringBoot自动配置底层源码解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/10.Spring Cloud Alibaba/00.微服务架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/10.Spring Cloud Alibaba/10.负载均衡Ribbon&amp;LoadBalancer实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/10.Spring Cloud Alibaba/150.微服务安全Spring Security OAuth2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/10.Spring Cloud Alibaba/20.微服务调用组件Feign&amp;Dubbo实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/nacos/01.Nacos注册中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/nacos/02.Nacos配置中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/seata/Seata事务模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/微服务/seata/分布式事务组件Seata.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +60,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/project/redis&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -123,6 +135,12 @@
       <workItem from="1692581934338" duration="1188000" />
       <workItem from="1693330250198" duration="462000" />
       <workItem from="1693407326484" duration="19000" />
+      <workItem from="1693408196875" duration="105000" />
+      <workItem from="1708064626955" duration="3213000" />
+      <workItem from="1708145684206" duration="604000" />
+      <workItem from="1708413867106" duration="607000" />
+      <workItem from="1708422104610" duration="4286000" />
+      <workItem from="1708888179481" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>
@@ -224,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693330260930</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update">
+      <option name="closed" value="true" />
+      <created>1693408250134</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693408250134</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
