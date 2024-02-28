@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/三、并发编程/00.深入理解并发、线程与等待通知机制.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/三、并发编程/00.深入理解并发、线程与等待通知机制.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +130,7 @@
       <workItem from="1708888179481" duration="4000" />
       <workItem from="1709057396983" duration="1508000" />
       <workItem from="1709058945189" duration="4567000" />
-      <workItem from="1709063682975" duration="2291000" />
+      <workItem from="1709063682975" duration="3370000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>
@@ -273,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709101391055</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update">
+      <option name="closed" value="true" />
+      <created>1709102448493</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709102448493</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
