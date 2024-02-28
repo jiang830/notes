@@ -6,12 +6,27 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "学习笔记",
+  title: "",
   description: "",
 
   theme: hopeTheme({
-    sidebar: "structure"
+    sidebar: "structure",
+
+    navbar: [
+
+      {
+        text: "首页",
+        link: "",
+        icon: "circle-question",
+      },
+      {
+        text: "文档",
+        link: "/pages/",
+        icon: "circle-question",
+      },
+    ],
   }),
+
 
   // 和 PWA 一起启用
   // shouldPrefetch: false,

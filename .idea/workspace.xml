@@ -5,7 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/sidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/sidebar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/styles/config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/styles/config.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/intro.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/01.MySQL索引数据结构详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/02.Explain详解与索引最佳实践.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/03.SQL是如何执行的.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/04.MySQL索引优化 一.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/05.MySQL索引优化 二.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/06.MySQL事务原理与优化最佳实践.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/07.MySQL锁机制与优化实践以及MVCC底层原理剖析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/08.Innodb底层原理与MySQL日志机制深入剖析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/09.MySQL全局优化与8.0版本新特性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/10.MySQL 8.0新特性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/00.MySQL/10.MySQL问题回顾.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/03.分库分表/00.MySQL集群架构搭建以及多数据源管理实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/03.分库分表/10.ShardingJDBC分库分表实战指南.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/03.分库分表/20.ShardingJDBC源码与内核解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/01.JVM类加载机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/02.JVM内存模型深度剖析与优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/03.JVM对象创建与内存分配机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/04.Class文件结构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/05.垃圾收集器ParNew&amp;CMS与底层三色标记算法详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/06.垃圾收集器G1&amp;ZGC详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/07.JVM调优工具详解及调优实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/JVM/10.JVM调优实战及常量池详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/Tomcat/00.Tomcat整体架构及其设计精髓.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/Tomcat/10.Tomcat线程模型详解&amp;性能调优.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/一、性能调优/Tomcat/20.Tomcat类加载机制&amp;热加载和热部署实现.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/三、并发编程/00.深入理解并发、线程与等待通知机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/二、源码框架/00.Spring底层核心原理解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/二、源码框架/02.手写Spring.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/二、源码框架/03.Spring之底层架构核心概念解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/二、源码框架/05. Spring之Bean生命周期源码解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/00.SpringBoot原理/00.手写模拟SpringBoot核心流程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/00.SpringBoot原理/10.SpringBoot自动配置底层源码解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/10.Spring Cloud Alibaba/00.微服务架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/10.Spring Cloud Alibaba/10.负载均衡Ribbon&amp;LoadBalancer实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/10.Spring Cloud Alibaba/150.微服务安全Spring Security OAuth2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/10.Spring Cloud Alibaba/20.微服务调用组件Feign&amp;Dubbo实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/nacos/01.Nacos注册中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/nacos/02.Nacos配置中心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/seata/00.分布式事务组件Seata.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/五、微服务/seata/10.Seata事务模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/00.Redis安装.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/01.Redis核心数据结构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/02.Redis高性能原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/10.Redis持久化策略.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/100.Redis常见面试题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/11.Redis主从与哨兵架构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/12.Redis哨兵机制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/20.Redis缓存高可用集群.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/30.Redis缓存高可用集群水平扩展.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/40.Redis高并发分布式锁.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/50.一线大厂高并发缓存架构实战与性能优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/60.Redis缓存设计与性能优化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/70.Redis源码以及核心设计原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/00.Redis/80.Redis HyperLogLog底层与GEO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/02.ElasticSearch/00.ElasticSearch快速入门实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/02.ElasticSearch/01.ElasticSearch基础查询语句.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/02.ElasticSearch/10.ElasticSearch 高级查询语法Query DSL实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/02.ElasticSearch/20. ElasticSearch搜索技术深入与聚合查询实战.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/02.ElasticSearch/30.ElasticSearch集群架构实战及其原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/03.Dubbo/00.手写模拟Dubbo的底层实现原理实现.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/03.Dubbo/10.Dubbo3.0入门教程与新特性介绍.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/03.Dubbo/20.Dubbo 3.0服务注册与引入底层原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/03.Dubbo/30.Dubbo3中的服务调用底层原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/04.Zookeeper/00.Zookeeper特性与节点数据类型详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/04.Zookeeper/10.Zookeeper客户端使用与经典应用场景.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/04.Zookeeper/11.Zookeeper在分布式命名服务中的实践.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/00.RabbitMQ/00.RabbitMQ上手以及集群搭建.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/00.RabbitMQ/10.RabbitMQ工作模式剖析以及常用编程模型.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/00.RabbitMQ/20.RabbitMQ高级使用场景.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/00.RabbitMQ/30.RabbitMQ使用中的常见问题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/00.RabbitMQ/40.RabbitMQ实现消费端异常处理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/01.Kafka/00.Kafka基本原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/01.Kafka/10.Kafka设计原理详解.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/02.RocketMQ/01.RocketMQ快速实战以及集群架构解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/02.RocketMQ/02.RocketMQ开发模型与生产环境问题剖析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/四、分布式/05.消息队列/02.RocketMQ/20.RocketMQ高性能核心原理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/面试/阿里云面试题.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/面试/阿里云面试题.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +98,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="vuepress-theme-hope" />
+        <entry key="$PROJECT_DIR$" value="vuepress-theme-vdoing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,6 +214,7 @@
       <workItem from="1709057396983" duration="1508000" />
       <workItem from="1709058945189" duration="4567000" />
       <workItem from="1709063682975" duration="6635000" />
+      <workItem from="1709112791614" duration="2051000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>
