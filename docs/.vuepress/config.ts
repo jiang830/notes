@@ -25,6 +25,11 @@ export default defineUserConfig({
         icon: "circle-question",
       },
     ],
+    plugins: {
+       searchPro: {
+         indexContent: true,
+       },
+    },
   }),
 
 
