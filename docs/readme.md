@@ -1,10 +1,10 @@
 ---
-home: true
+home: false
 icon: home
 title: 首页
 heroImage: 
-bgImage: https://img.jssjqd.cn/202402281750423.png
-bgImageDark: https://img.jssjqd.cn/202402281750423.png
+bgImage: 
+bgImageDark: 
 heroFullScreen: true
 bgImageStyle:
 copyright: false

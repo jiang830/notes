@@ -10,6 +10,7 @@ export default defineUserConfig({
   description: "",
 
   theme: hopeTheme({
+
     sidebar: "structure",
 
     navbar: [

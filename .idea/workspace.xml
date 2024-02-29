@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7444f9ed-f38f-44d5-984e-619f820de5fd" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/并发编程/00.深入理解并发、线程与等待通知机制.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/并发编程/00.深入理解并发、线程与等待通知机制.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +137,7 @@
       <workItem from="1709063682975" duration="6635000" />
       <workItem from="1709112791614" duration="2722000" />
       <workItem from="1709115549922" duration="2537000" />
-      <workItem from="1709189719993" duration="2322000" />
+      <workItem from="1709189719993" duration="3414000" />
     </task>
     <task id="LOCAL-00001" summary="update butterfly">
       <created>1681589719428</created>
@@ -356,7 +359,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709199811815</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update">
+      <option name="closed" value="true" />
+      <created>1709199959724</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709199959724</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update">
+      <option name="closed" value="true" />
+      <created>1709200082221</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709200082221</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
